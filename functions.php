@@ -60,10 +60,10 @@ if ( ! function_exists( 'beyond_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'beyond_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
+		// add_theme_support( 'custom-background', apply_filters( 'beyond_custom_background_args', array(
+		// 	'default-color' => 'ffffff',
+		// 	'default-image' => '',
+		// ) ) );
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -126,9 +126,11 @@ function beyond_scripts() {
 
 	wp_enqueue_script( 'beyond-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+  wp_enqueue_script( 'beyond-scriptbundle', get_template_directory_uri() . '/js/script.js', array(), '20151218', true );
+
+	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+	// 	wp_enqueue_script( 'comment-reply' );
+	// }
 }
 add_action( 'wp_enqueue_scripts', 'beyond_scripts' );
 
@@ -159,3 +161,28 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Enque css file for the login page
+function my_custom_login() {
+  echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/login.css" />';
+  }
+  add_action('login_head', 'my_custom_login');
+  
+  // Adds link to home page when the user clicks on logo on login page
+  function my_login_logo_url() {
+      return home_url();
+  }
+  add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+  function my_login_logo_url_title() {
+      return 'Beyond Curtin Digital Grad Show 2018';
+  }
+  add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
+  
+
+
+// Require custom post types
+require get_template_directory() . '/inc/graduate-profile-post-type.php';
+
+// Require custom skills taxonomy
+require get_template_directory() . '/inc/skills-taxonomy.php';

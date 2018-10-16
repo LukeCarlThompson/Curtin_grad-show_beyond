@@ -39,10 +39,6 @@ document.addEventListener("DOMContentLoaded", function() {
   var throttle = 20;
   // Vars for the things that happen on scrolling
   var nav = document.querySelector("#masthead");
-  var taglineWrap = document.querySelector('.tagline-wrap');
-  var taglineVan = document.querySelector('.tagline-wrap .van-svg');
-  var taglineText = taglineWrap.querySelector('h2');
-  var animPlayed;
 
   // Vars for hero parallax
   // var hero = document.getElementById("parallaxWrap");
@@ -69,31 +65,6 @@ document.addEventListener("DOMContentLoaded", function() {
             // var resetTrigger = taglineWrap.offsetTop - taglineWrap.clientHeight;
             // var taglineVanTrigger = taglineWrap.offsetTop;
 
-            if( isInViewport(taglineWrap) && (animPlayed == null || animPlayed == false) ) {
-              var taglineVanAnim = anime({
-                targets: taglineVan,
-                translateX: ['-80vw', '0vw'],
-                easing: 'easeOutSine',
-                duration: 1000,
-                begin: function() {
-                  animPlayed = true;
-                  taglineText.classList.add('unclip');
-                }
-              })
-            }
-
-            if( isVisible(taglineWrap) === false ) {
-              animPlayed = false;
-              taglineVan.style.cssText = '';
-              taglineText.classList.remove('unclip');
-            }
-
-            // checking to see if the testimonials are on screen to start and stop the timer
-              if( isVisible(testimonialsWrap) ) {
-                startTheTimer();
-              } else if( ! isVisible(testimonialsWrap) ) {
-                stopTheTimer();
-              }
 
             // Parallax the hero image/video
             // var offset = document.getElementById("about-section").offsetTop;
@@ -114,71 +85,9 @@ document.addEventListener("DOMContentLoaded", function() {
       // console.log('native scroll');
   };
 
-  // Tiny slider init for the homepage slider
-  var slider = tns({
-    container: '.my-slider',
-    items: 1,
-    mode: 'gallery',
-    controls: false,
-    nav: false,
-    arrowKeys: true,
-    speed: 800,
-    autoplay: true,
-    autoplayButtonOutput: false,
-    autoplayTimeout: 5000,
-    // autoWidth: true,
-    // autoHeight: true,
-    lazyload: true,
-    mouseDrag: true
-  });
-
-  // Script for the testimonials scroller
-  var testimonialsWrap = document.querySelector('.testimonials-wrap');
-  var testimonials = [].slice.call(document.querySelectorAll('.testimonial-card'));
-  var classes = ['first', 'second', 'active', 'fourth', 'fifth'];
-  var testimonialTimer;
-  var timerStarted;
-
-  testimonialsLoop(testimonials, classes);
-
-  function testimonialsLoop(testimonials, classes) {
-    for(var i = 0; testimonials.length > i; i++) {
-      if(i < 5) {
-        testimonials[i].classList.remove('first', 'second', 'active', 'fourth', 'fifth', 'hidden');
-        testimonials[i].classList.add(classes[i]);
-      } else {
-        testimonials[i].classList.remove('first', 'second', 'active', 'fourth', 'fifth', 'hidden');
-        testimonials[i].classList.add('hidden');
-      }
-    }
-  }
-
-  function startTheTimer(){
-    if(timerStarted == false || timerStarted == null) {
-      timerStarted = true;
-      testimonialTimer = setInterval( function() {
-        testimonialsLoop(testimonials, classes);
-        testimonials.unshift(testimonials.pop());
-        }, 3000);
-    }
-  }
-
-  function stopTheTimer(){
-    if(timerStarted == true) {
-      clearInterval(testimonialTimer);
-      timerStarted = false;
-    }
-  }
-
-  testimonialsWrap.addEventListener("mouseover", function() {
-    stopTheTimer();
-  });
-
-  testimonialsWrap.addEventListener("mouseout", function() {
-    startTheTimer();
-  });
-
-
+console.log('testing');
 
 
 });
+
+console.log('testing 02');

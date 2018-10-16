@@ -1,5 +1,5 @@
 {
-  "name": "premier-electrical",
+  "name": "Beyond",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -9,21 +9,16 @@
   "author": "Luke Thompson",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.26.2",
-    "browser-sync": "^2.18.8",
+    "browser-sync": "latest",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-babel": "^7.0.1",
     "gulp-concat": "latest",
     "gulp-cssnano": "^2.1.2",
-    "gulp-imagemin": "^3.2.0",
+    "gulp-imagemin": "^4.1.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify-es": "latest",
-    "gulp-util": "latest",
-    "imagemin-giflossy": "^5.1.10",
-    "imagemin-mozjpeg": "^7.0.0",
-    "imagemin-pngquant": "^5.1.0",
-    "imagemin-zopfli": "^5.1.0"
+    "gulp-util": "latest"
   }
 }
