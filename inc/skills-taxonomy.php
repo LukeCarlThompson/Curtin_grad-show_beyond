@@ -1,12 +1,12 @@
 <?php
 
 // Register Custom Taxonomy
-function your_skills() {
+function graduate_skills() {
 
 	$labels = array(
-		'name'                       => _x( 'Your Skills', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Your Skill', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Your Skills', 'text_domain' ),
+		'name'                       => _x( 'Skills', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Skill', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Skills', 'text_domain' ),
 		'all_items'                  => __( 'All Skills', 'text_domain' ),
 		'parent_item'                => __( 'Parent Skill', 'text_domain' ),
 		'parent_item_colon'          => __( 'Parent Skill:', 'text_domain' ),
@@ -34,9 +34,9 @@ function your_skills() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'your_skills', array( 'graduate_profile' ), $args );
+	register_taxonomy( 'skills', array( 'graduate-profile' ), $args );
 
 }
-add_action( 'init', 'your_skills', 0 );
+add_action( 'init', 'graduate_skills', 0 );
 
 ?>

@@ -36,7 +36,7 @@ function graduate_profile() {
 		'label'                 => __( 'Graduate Profile', 'text_domain' ),
 		'description'           => __( 'Graduate Profile', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'thumbnail', 'revisions', 'custom-fields' ),
+		'supports'              => array( 'title', 'thumbnail', 'revisions', 'custom-fields' ),
 		'taxonomies'            => array( 'your_skills' ),
 		'hierarchical'          => false,
 		'public'                => true,
@@ -50,9 +50,9 @@ function graduate_profile() {
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
-		'capability_type'       => 'page',
+		'capability_type'       => 'post',
 	);
-	register_post_type( 'graduate_profile', $args );
+	register_post_type( 'graduate-profile', $args );
 
 }
 add_action( 'init', 'graduate_profile', 0 );

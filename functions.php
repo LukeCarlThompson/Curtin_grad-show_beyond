@@ -53,8 +53,8 @@ if ( ! function_exists( 'beyond_setup' ) ) :
 		 */
 		add_theme_support( 'html5', array(
 			'search-form',
-			'comment-form',
-			'comment-list',
+			// 'comment-form',
+			// 'comment-list',
 			'gallery',
 			'caption',
 		) );
@@ -177,6 +177,17 @@ function my_custom_login() {
       return 'Beyond Curtin Digital Grad Show 2018';
   }
   add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
+
+
+// Remove menu items from admin
+function admin_menu_remove (){
+  remove_menu_page('edit.php');
+  remove_menu_page( 'edit-comments.php' );
+  remove_menu_page( 'tools.php' );
+}
+
+add_action('admin_menu', 'admin_menu_remove');//adding action for triggering function call
 
   
 

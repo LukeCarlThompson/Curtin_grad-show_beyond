@@ -1,29 +1,26 @@
 /* styles for the login page go here */
 /* This stylesheet is enqued in the functions file */
 
-body.login div#login h1 a {
-  background-image: url('img/usc-logo-colour.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  background-size: contain;
-}
-
-
 body.login {
-  background: linear-gradient(to bottom, rgb(232, 252, 255) 20%, rgb(184, 255, 229));
-}
-
-.login .message {
-  box-shadow: none;
-  border-left: none;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-  background: transparent;
-}
-
-.login form {
-  border-radius: 4px;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0, 0, 0, 0.1), 0 20px 50px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, white 30%, #63c9c7);
+  // background: white;
+  div#login h1 a {
+    background-image: url('images/beyond_brandmark.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    background-size: contain;
+  }
+  .message {
+    box-shadow: none;
+    border-left: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    background: transparent;
+  }
+  form {
+    border-radius: 4px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0, 0, 0, 0.1), 0 20px 50px rgba(0, 0, 0, 0.1);
+  }
 }
