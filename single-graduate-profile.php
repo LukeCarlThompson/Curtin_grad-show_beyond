@@ -14,22 +14,76 @@ get_header();
 		<main id="main" class="site-main">
 
 		<?php
-		// while ( have_posts() ) :
-		// 	the_post();
+		while ( have_posts() ) :
+			the_post();
 
-		// 	get_template_part( 'template-parts/content', get_post_type() );
+			// get_template_part( 'template-parts/content', get_post_type() );
+      ?>
+      <div class="graduate-profile-top-section">
+        <div class="profile-title-wrap">
+          <h1 class="graduate-name"><?php the_field('your_name'); ?></h1>
+          <?php 
+          $terms = get_field('skills_list');
+          if( $terms ): ?>
+            <ul class="skills-list">
+            <?php foreach( $terms as $term ): ?>
+              <li class="skills-list-item"><?php echo $term->name; ?></li>
+            <?php endforeach; ?>
+            </ul>
+          <?php
+          endif;
+          ?>
+        </div>
+      </div>
 
-		// 	the_post_navigation();
+      <div class="graduate-profile-bottom-section">
+        <div class="profile-img-wrap">
+          <?php 
+          $image = get_field('profile_picture');
+          if( !empty($image) ): ?>
+            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+          <?php
+          endif;
+          ?>
+        </div>
+        <div class="graduate-profile-bio-wrap">
+          <p><?php the_field('your_bio') ?></p>
+          <a class="portfolio-link" href="<?php the_field('your_portfolio_website') ?>">Portfolio</a>
+        </div>
+      </div>
 
-		// 	// If comments are open or we have at least one comment, load up the comment template.
-		// 	if ( comments_open() || get_comments_number() ) :
-		// 		comments_template();
-		// 	endif;
+      <div class="featured-projects-wrap">
+        <?php
+        if( have_rows('featured_project') ):
+          // loop through the rows of data
+          while ( have_rows('featured_project') ) : the_row();
+            $image = get_sub_field('project_preview');
+		        $project_name = get_sub_field('project_name');
 
-		// endwhile; // End of the loop.
+            ?>
+            <div class="project-preview-wrap">
+              <img src="<?php echo $image[url] ?>" alt="<?php echo $image[alt] ?>" />
+              <h3><?php echo $project_name ?></h3>
+            </div>
+
+
+            <?php
+
+          endwhile;
+        else :
+            ?>
+            <p>No featured projects found</p>
+            <?php
+        endif;
+        ?>
+      </div>
+
+      <?php
+
+			the_post_navigation();
+
+		endwhile; // End of the loop.
 		?>
-
-    <h1>Single graduate profile post template</h1>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

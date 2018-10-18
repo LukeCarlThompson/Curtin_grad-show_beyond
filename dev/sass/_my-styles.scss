@@ -1,0 +1,147 @@
+
+
+// styles for the home page
+
+.hero-section {
+  min-height: 100vh;
+  background-color: $color__brand_turquoise;
+}
+
+.about-section {
+  padding: 10rem 1rem;
+  display: flex;
+  flex-direction: column;
+  * {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.details-section {
+  padding: 10rem 1rem;
+  display: flex;
+  background-image: url("images/the-bird.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+.details-info-wrap {
+  margin: auto;
+  background-color: white;
+  padding: 0.8rem 2rem;
+  text-align: center;
+}
+
+.graduates-section {
+  border: 1px solid red;
+  padding: 5rem 1rem;
+}
+
+.graduates-grid-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.graduate-block-wrap {
+  flex: 1 0 400px;
+  position: relative;
+  .graduate-info-wrap {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+  }
+  .graduate-name {
+    text-align: center;
+    margin: 0;
+  }
+  .skills-list {
+    justify-content: center;
+    padding: 0.8rem;
+  }
+  .skills-list-item {
+    margin: 0 0.5rem;
+  }
+}
+
+.skills-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.skills-list-item {
+  margin-right: 0.5rem;
+}
+
+.sponsors-section {
+  border: 1px solid red;
+  padding: 5rem 1rem;
+}
+
+.contact-section {
+  border: 1px solid red;
+  padding: 5rem 1rem;
+}
+
+
+
+
+// styles for the graduate profile pages ****************************************************
+.graduate-profile-top-section {
+  // padding: 2rem 4rem 2rem 400px;
+}
+.profile-title-wrap {
+  padding: 1rem 4rem 2rem 440px;
+  max-width: 1000px;
+  background-color: $color__brand_orange;
+  color: white;
+  .graduate-name {
+    margin: 1rem 0 0;
+  }
+}
+
+.graduate-profile-bottom-section {
+  padding: 0 1rem 1rem 0;
+  display: flex;
+  width: 100%;
+}
+.profile-img-wrap {
+  margin: -100px 40px 0 0;
+  height: 400px;
+  width: 400px;
+  flex: 0 0 400px;
+  img {
+    height: 100%;
+  }
+}
+
+a.portfolio-link {
+  color: $color__brand_turquoise;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 4px solid $color__brand_turquoise;
+  padding: 0.5rem 0.8rem;
+}
+
+.featured-projects-wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 5rem 0;
+}
+
+.project-preview-wrap {
+  // flex: 0 0 30%;
+  width: calc(33% - 10px);
+  position: relative;
+  h3 {
+    position: absolute;
+    bottom: 0.5rem;
+    text-align: center;
+    width: 100%;
+  }
+}
