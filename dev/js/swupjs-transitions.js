@@ -26,15 +26,15 @@
 var homeToProfileOut = function(next) {
   anime({
     targets: '.graduate-block-wrap',
-    // opacity: 0,
-    // translateX: '-20vw',
+    // translateY: 100,
+    translateZ: 400,
     scale: 0.3,
     opacity: 0,
     duration: 400,
-    // delay: function(el, i, l) {
-    //   return i * 100;
-    // },
-    easing: 'easeInCubic',
+    delay: function(el, i, l) {
+      return i * 50;
+    },
+    easing: 'easeInSine',
     begin: console.log('hello'),
     complete: next
   })
