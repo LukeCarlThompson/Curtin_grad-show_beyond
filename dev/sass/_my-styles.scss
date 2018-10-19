@@ -34,7 +34,7 @@
     position: absolute;
     box-shadow: 0 5px 30px $color__brand_teal;
     opacity: 0;
-    transform: opacity 0.5s linear;
+    transition: opacity 0.5s linear;
   }
   &.shrink {
     transition: transform 0.8s $ease-out-quart;
@@ -72,10 +72,16 @@
   padding: 10rem 1rem;
   display: flex;
   flex-direction: column;
-  * {
+  h2 {
+    margin-bottom: 1rem;
+  }
+  p {
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
+  }
+  .diamond {
+    margin: 2rem auto;
   }
 }
 
@@ -87,12 +93,14 @@
   background-blend-mode: luminosity;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50%;
+  // background-position: 50%;
+  background-attachment: fixed;
 }
 .details-info-wrap {
   margin: auto;
   background-color: white;
   padding: 2rem 2rem 1rem;
+  box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5), 0 20px 40px rgba(0, 0, 0, 0.5);
   text-align: center;
   h2 {
     margin: 0.5rem 0.5rem;
@@ -123,7 +131,7 @@
   flex: 1 0 400px;
   position: relative;
   overflow: hidden;
-  // background-color: $color__brand_orange;
+  // background-color: $color__brand_teal;
   // &:nth-child(even) {
   //   background-color: $color__brand_turquoise;
   // }
@@ -133,7 +141,7 @@
   img {
     transition: transform 0.5s $ease-out-quart;
     transform-origin: 50% 20%;
-    // mix-blend-mode: luminosity;
+    // mix-blend-mode: overlay;
   }
   .graduate-info-wrap {
     position: absolute;
@@ -213,6 +221,7 @@
   height: 400px;
   width: 400px;
   flex: 0 0 400px;
+  box-shadow: 0 40px 30px -30px rgba(0, 0, 0, 0.2), 0 20px 30px -5px rgba(0, 0, 0, 0.1);
   img {
     height: 100%;
   }
@@ -231,7 +240,7 @@
 
 a.portfolio-link {
   color: $color__brand_turquoise;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;

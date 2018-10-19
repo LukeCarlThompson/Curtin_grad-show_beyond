@@ -26,7 +26,7 @@
 var homeToProfileOut = function(next) {
   anime({
     targets: '.graduate-block-wrap',
-    // translateY: 100,
+    translateY: -500,
     translateZ: 400,
     scale: 0.3,
     opacity: 0,
@@ -118,7 +118,7 @@ var profileToHomeIn = function(next) {
 var nextProfileOut = function(next) {
   anime({
     targets: '.site-main',
-    rotate: '45deg',
+    rotate: '-45deg',
     opacity: 0,
     duration: 200,
     easing: 'easeInCubic',
@@ -130,30 +130,32 @@ var nextProfileIn = function(next) {
   anime.timeline()
     .add({
       targets: '.site-main',
-      rotate: ['-45deg', 0],
+      rotate: ['45deg', 0],
       opacity: [0, 1],
       easing: [0, 1, 0, 1],
     })
     .add({
       targets: '.profile-img-wrap',
       opacity: [0, 1],
-      translateX: [-200, 0],
+      translateX: [200, 0],
       translateZ: [-200, 0],
+      rotate: ['90deg', 0],
       easing: [0, 1, 0, 1],
       offset: 0
     })
     .add({
       targets: '.graduate-profile-top-section',
       opacity: [0, 1],
-      translateX: [-200, 0],
+      translateX: [200, 0],
       translateZ: [-300, 0],
+      rotate: ['30deg', 0],
       easing: [0, 1, 0, 1],
       offset: 150
     })
     .add({
       targets: '.graduate-profile-bio-wrap',
       opacity: [0, 1],
-      translateX: [-200, 0],
+      translateX: [200, 0],
       translateZ: [-400, 0],
       easing: [0, 1, 0, 1],
       offset: 250
@@ -161,7 +163,7 @@ var nextProfileIn = function(next) {
     .add({
       targets: '.project-preview-wrap',
       opacity: [0, 1],
-      translateX: [-200, 0],
+      translateX: [200, 0],
       translateZ: [-500, 0],
       easing: [0, 1, 0, 1],
       offset: 350,
@@ -175,7 +177,7 @@ var nextProfileIn = function(next) {
 var prevProfileOut = function(next) {
   anime({
     targets: '.site-main',
-    rotate: '-45deg',
+    rotate: '45deg',
     opacity: 0,
     duration: 200,
     easing: 'easeInCubic',
@@ -188,30 +190,32 @@ var prevProfileIn = function(next) {
     anime.timeline()
     .add({
       targets: '.site-main',
-      rotate: ['45deg', 0],
+      rotate: ['-45deg', 0],
       opacity: [0, 1],
       easing: [0, 1, 0, 1],
     })
     .add({
       targets: '.profile-img-wrap',
       opacity: [0, 1],
-      translateX: [200, 0],
+      translateX: [-200, 0],
       translateZ: [-200, 0],
+      rotate: ['-90deg', 0],
       easing: [0, 1, 0, 1],
       offset: 0
     })
     .add({
       targets: '.graduate-profile-top-section',
       opacity: [0, 1],
-      translateX: [200, 0],
+      translateX: [-200, 0],
       translateZ: [-300, 0],
+      rotate: ['-30deg', 0],
       easing: [0, 1, 0, 1],
       offset: 150
     })
     .add({
       targets: '.graduate-profile-bio-wrap',
       opacity: [0, 1],
-      translateX: [200, 0],
+      translateX: [-200, 0],
       translateZ: [-400, 0],
       easing: [0, 1, 0, 1],
       offset: 250
@@ -219,7 +223,7 @@ var prevProfileIn = function(next) {
     .add({
       targets: '.project-preview-wrap',
       opacity: [0, 1],
-      translateX: [200, 0],
+      translateX: [-200, 0],
       translateZ: [-500, 0],
       easing: [0, 1, 0, 1],
       offset: 350,

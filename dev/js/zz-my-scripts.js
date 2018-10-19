@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var nav = document.querySelector("#masthead");
 
   // Vars for hero parallax
-  // var hero = document.getElementById("parallaxWrap");
+  var hero = document.querySelector(".hero-section");
 
   // var to control the number of pixels scrolled before applying shrink class to the header
   var shrinkLimit = 70;
@@ -106,24 +106,18 @@ document.addEventListener("DOMContentLoaded", function() {
               nav.classList.remove("shrink");
             }
 
-            // animate van on scroll
-            // var slideInAt = (scrollAmount + window.innerHeight) - taglineWrap.clientHeight;
-            // var resetTrigger = taglineWrap.offsetTop - taglineWrap.clientHeight;
-            // var taglineVanTrigger = taglineWrap.offsetTop;
-
-
             // Parallax the hero image/video
-            // var offset = document.getElementById("about-section").offsetTop;
-            // if (scrollAmount < offset) {
-            //   var moveNum = (scrollAmount / 7500) + 1;
-            //   var eased = moveNum * moveNum * moveNum * moveNum;
-            //   if (eased < 1) {
-            //     var eased = 1;
-            //   };
-            //   hero.style.transform = 'scale(' + eased + ') translateY(' + eased * eased * eased + 'px)';
-            //   var opacityVal = 2 - (eased * eased * eased);
-            //   hero.style.opacity = opacityVal;
-            // }
+            var offset = document.querySelector(".about-section").offsetTop;
+            if (scrollAmount < offset) {
+              var moveNum = (scrollAmount / 7500) + 1;
+              var eased = moveNum * moveNum * moveNum * moveNum;
+              if (eased < 1) {
+                var eased = 1;
+              };
+              hero.style.transform = 'scale(' + eased + ') translateY(' + (eased -1) * 100 + 'px)';
+              var opacityVal = 2 - (eased * eased * eased);
+              hero.style.opacity = opacityVal;
+            }
 
               scrollTimeout = null;
           }, throttle);

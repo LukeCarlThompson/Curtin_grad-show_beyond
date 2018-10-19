@@ -212,6 +212,7 @@ get_header();
     <div class="about-section">
       <h2 class="section-heading">Join Us</h2>
       <p>Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <span class="diamond"></span>
     
     </div>
 
