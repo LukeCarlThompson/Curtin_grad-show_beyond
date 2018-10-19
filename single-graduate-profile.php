@@ -78,9 +78,50 @@ get_header();
         ?>
       </div>
 
+      <div class="post-nav">
       <?php
+        //Get Previous Post Thumbnail and link
+        $prevPost = get_previous_post();
+        if($prevPost):
+          ?>
+          <a class="prev-post-link" data-swup-class="prev-profile" href="<?php echo get_permalink( get_previous_post() ); ?>">
+          <?php
+            echo "<div class='nav-thumbnail-text'><h3>Prev</h3><span>" . get_field('your_name', $prevPost->ID) . "</span></div>";
+            $navThumb = get_field('profile_picture', $prevPost->ID);
+            if( !empty($navThumb) ): ?>
+              <div class="nav-thumbnail-img-wrap">
+                <img class="nav-thumbnail" src="<?php echo $navThumb['url']; ?>" alt="<?php echo $navThumb['alt']; ?>" />
+              </div>
+              <?php
+            endif;
+          ?>
+          </a>
+          <?php
+        endif;
 
-			the_post_navigation();
+
+        //Get The Next Post Thumbnail and link
+        $nextPost = get_next_post();
+        if($nextPost):
+          ?>
+          <a class="next-post-link" data-swup-class="next-profile" href="<?php echo get_permalink( get_next_post() ); ?>">
+          <?php
+            $navThumb = get_field('profile_picture', $nextPost->ID);
+            if( !empty($navThumb) ): ?>
+              <div class="nav-thumbnail-img-wrap">
+                <img src="<?php echo $navThumb['url']; ?>" alt="<?php echo $navThumb['alt']; ?>" />
+              </div>
+              <?php
+            endif;
+            echo "<div class='nav-thumbnail-text'><h3>Next</h3><span>" . get_field('your_name', $prevPost->ID) . "</span></div>";
+          ?>
+          </a>
+          <?php
+        endif;
+
+      ?>
+      </div>
+      <?php
 
 		endwhile; // End of the loop.
 		?>

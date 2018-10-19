@@ -48,7 +48,7 @@ var homeToProfileIn = function(next) {
       scale: [0.5, 1],
       easing: 'easeOutCubic',
       duration: 400,
-      offset: '-=200'
+      // offset: '-=200'
     })
     .add({
       targets: '.graduate-profile-top-section',
@@ -112,6 +112,122 @@ var profileToHomeIn = function(next) {
     easing: 'easeOutCubic',
     complete: next
   })
+}
+
+// next and prev post transitions
+var nextProfileOut = function(next) {
+  anime({
+    targets: '.site-main',
+    rotate: '45deg',
+    opacity: 0,
+    duration: 200,
+    easing: 'easeInCubic',
+    complete: next
+  })
+}
+
+var nextProfileIn = function(next) {
+  anime.timeline()
+    .add({
+      targets: '.site-main',
+      rotate: ['-45deg', 0],
+      opacity: [0, 1],
+      easing: [0, 1, 0, 1],
+    })
+    .add({
+      targets: '.profile-img-wrap',
+      opacity: [0, 1],
+      translateX: [-200, 0],
+      translateZ: [-200, 0],
+      easing: [0, 1, 0, 1],
+      offset: 0
+    })
+    .add({
+      targets: '.graduate-profile-top-section',
+      opacity: [0, 1],
+      translateX: [-200, 0],
+      translateZ: [-300, 0],
+      easing: [0, 1, 0, 1],
+      offset: 150
+    })
+    .add({
+      targets: '.graduate-profile-bio-wrap',
+      opacity: [0, 1],
+      translateX: [-200, 0],
+      translateZ: [-400, 0],
+      easing: [0, 1, 0, 1],
+      offset: 250
+    })
+    .add({
+      targets: '.project-preview-wrap',
+      opacity: [0, 1],
+      translateX: [-200, 0],
+      translateZ: [-500, 0],
+      easing: [0, 1, 0, 1],
+      offset: 350,
+      delay: function(el, i, l) {
+        return i * 100;
+      },
+      complete: next
+    })
+}
+
+var prevProfileOut = function(next) {
+  anime({
+    targets: '.site-main',
+    rotate: '-45deg',
+    opacity: 0,
+    duration: 200,
+    easing: 'easeInCubic',
+    complete: next
+  })
+}
+
+var prevProfileIn = function(next) {
+
+    anime.timeline()
+    .add({
+      targets: '.site-main',
+      rotate: ['45deg', 0],
+      opacity: [0, 1],
+      easing: [0, 1, 0, 1],
+    })
+    .add({
+      targets: '.profile-img-wrap',
+      opacity: [0, 1],
+      translateX: [200, 0],
+      translateZ: [-200, 0],
+      easing: [0, 1, 0, 1],
+      offset: 0
+    })
+    .add({
+      targets: '.graduate-profile-top-section',
+      opacity: [0, 1],
+      translateX: [200, 0],
+      translateZ: [-300, 0],
+      easing: [0, 1, 0, 1],
+      offset: 150
+    })
+    .add({
+      targets: '.graduate-profile-bio-wrap',
+      opacity: [0, 1],
+      translateX: [200, 0],
+      translateZ: [-400, 0],
+      easing: [0, 1, 0, 1],
+      offset: 250
+    })
+    .add({
+      targets: '.project-preview-wrap',
+      opacity: [0, 1],
+      translateX: [200, 0],
+      translateZ: [-500, 0],
+      easing: [0, 1, 0, 1],
+      offset: 350,
+      delay: function(el, i, l) {
+        return i * 100;
+      },
+      complete: next
+    })
 }
 
 

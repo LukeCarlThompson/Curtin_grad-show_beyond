@@ -32,7 +32,25 @@ document.addEventListener("DOMContentLoaded", function() {
         in: function (next) {
           homeToProfileIn(next);
         }
-      }
+      },
+      '*>next-profile': {
+        out: function (next) {
+          console.log('next profile out');
+          nextProfileOut(next);
+        },
+        in: function (next) {
+          nextProfileIn(next);
+        }
+      },
+      '*>prev-profile': {
+        out: function (next) {
+          console.log('next profile out');
+          prevProfileOut(next);
+        },
+        in: function (next) {
+          prevProfileIn(next);
+        }
+      },
     }
   });
 

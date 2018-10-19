@@ -13,6 +13,14 @@
   // justify-content: space-between;
 }
 
+// global styles for every page
+.site-main {
+  transform-origin: 50% 200%;
+  perspective: 700px;
+  transform-style: preserve-3d;
+  perspective-origin: 50% -100%;
+}
+
 // styles for the home page **********************************************************
 
 .hero-section {
@@ -157,5 +165,93 @@ a.portfolio-link {
     bottom: 0.5rem;
     text-align: center;
     width: 100%;
+  }
+}
+
+// next and prev post nav
+.post-nav {
+  display: flex;
+  width: 100%;
+  position: relative;
+  height: 150px;
+  padding: 20px;
+  margin-top: 60px;
+  justify-content: space-between;
+  align-items: flex-end;
+  .nav-thumbnail-text {
+    z-index: 1;
+  }
+  h3 {
+    margin: 0 0 10px;
+  }
+}
+.nav-thumbnail-img-wrap {
+  margin: 0 10px;
+  max-width: 150px;
+  position: relative;
+  img {
+    transform: scale(0.8);
+    // opacity: 0;
+    transition: opacity 0.3s linear 0.1s, transform 0.4s $ease-in-quart;
+  }
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   display: block;
+  //   height: 100px;
+  //   width: 80px;
+  //   @media screen and (max-width: 640px) {
+  //     height: 80px;
+  //     width: 40px;
+  //   }
+  //   box-shadow: 10px 15px 30px -5px hsla(0, 0, 0, 0.2);
+  //   top: -10%;
+  //   z-index: 0;
+  //   .prev-post-link & {
+  //     left: -30px;
+  //     background-color: $color__brand_teal;
+  //   }
+  //   .next-post-link & {
+  //     right: -30px;
+  //     background-color: $color__brand_teal;
+  //   }
+  // }
+}
+
+.prev-post-link, .next-post-link {
+  flex: 0 1 auto;
+  display: flex;
+  max-height: 100%;
+  max-width: 250px;
+  @media screen and (max-width: 640px) {
+    max-width: 150px;
+  }
+  justify-content: center;
+  &:hover img {
+    transition: opacity 0.3s linear, transform 0.5s $ease-out-quart;
+    opacity: 1;
+    transform: scale(1);
+  }
+  span {
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1em;
+    transition: opacity 0.3s linear, transform 0.5s $ease-out-quart;
+  }
+}
+
+.prev-post-link {
+  text-align: right;
+  img {
+    transform-origin: left top;
+    max-height: 120px;
+  }
+}
+
+.next-post-link {
+  margin-left: auto;
+  img {
+    transform-origin: right top;
+    max-height: 120px;
   }
 }
