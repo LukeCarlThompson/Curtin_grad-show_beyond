@@ -1,6 +1,19 @@
 
 
-// styles for the home page
+// Style for the header ***********************************************************
+
+.site-header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background-color: $color__brand_turquoise;
+  z-index: 1;
+  // justify-content: space-between;
+}
+
+// styles for the home page **********************************************************
 
 .hero-section {
   min-height: 100vh;
@@ -91,6 +104,7 @@
 // styles for the graduate profile pages ****************************************************
 .graduate-profile-top-section {
   // padding: 2rem 4rem 2rem 400px;
+  margin-top: 150px;
 }
 .profile-title-wrap {
   padding: 1rem 4rem 2rem 440px;

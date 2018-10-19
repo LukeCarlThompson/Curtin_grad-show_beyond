@@ -3,9 +3,37 @@
 document.addEventListener("DOMContentLoaded", function() {
   // code...
 
-  const swup = new Swup({
-    elements: ['.menu'],
-    // debugMode: true,
+  var swup = new Swupjs({
+    elements: ['.menu', '.site-main'],
+    animateScroll: false,
+    debugMode: true,
+    LINK_SELECTOR: 'a[href^="' + window.location.origin + '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup])',
+    animations: {
+      '*': {
+        out: function (next) {
+          profileToHomeOut(next)
+        },
+        in: function (next) {
+          profileToHomeIn(next)
+        }
+      },
+      '*>homepage': {
+        out: function (next) {
+          profileToHome(next);
+        },
+        in: function (next) {
+          homeToProfile(next);
+        }
+      },
+      'homepage>graduate-profile': {
+        out: function (next) {
+          homeToProfileOut(next);
+        },
+        in: function (next) {
+          homeToProfileIn(next);
+        }
+      }
+    }
   });
 
 

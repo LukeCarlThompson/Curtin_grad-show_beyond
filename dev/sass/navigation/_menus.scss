@@ -1,60 +1,59 @@
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	// float: left;
+	// width: calc(100% - 240px);
+  // align-self: flex-end;
+  // max-width: 700px;
+  // height: 100%;
+  margin-left: auto;
+  margin-top: auto;
+  padding: 10px 30px 10px 10px;
+  // background-color: $color__brand_turquoise;
+  transition: transform .5s ease-in-out;
 
 	ul {
-		display: none;
+		display: flex;
+    // justify-content: space-around;
+    align-items: flex-end;
+    height: 100%;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
+		li {
+			font-size: 1em;
+      padding: 0 5px;
+      margin: 0 5px;
+			position: relative;
+			text-decoration: none;
+			position: relative;
+      white-space: nowrap;
 
-			ul {
-				left: -999em;
-				top: 0;
+			&:after {
+				content: "";
+				position: absolute;
+				left: -2px;
+				bottom: 1px;
+				height: 3px;
+				background: white;
+				width: calc(100% + 4px);
+				transform: scaleX(0);
+				transform-origin: left;
+        transition: transform 0.2s ease-out;
+        will-change: transform;
+				z-index: -1;
 			}
 
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
+			&:hover:after,
+      &.focus:after,
+      &.current-menu-item:after {
+				transform: scaleX(1);
 			}
 		}
 
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-
-	li {
-		float: left;
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
+		a {
+      color: white;
+      font-size: 1.5rem;
+      font-family: $font__title;
 		}
 	}
 
@@ -62,33 +61,147 @@
 		display: block;
 		text-decoration: none;
 	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+.menu-toggle {
+	display: none;
 }
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
+@media screen and (max-width: 700px) {
+	.main-navigation {
+		pointer-events: none;
+		margin-top: 0;
+		width: 100vw;
+    position: absolute;
+    z-index: 100;
+		top: 0;
+		right: 0;
+    transition: background-color .2s ease-out;
+    height: 100vh;
+    transition-delay: .2s;
+
+		.menu-toggle {
+			pointer-events: auto;
+			display: block;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			z-index: 10;
+      padding: 10px;
+			border: none;
+      background-color: transparent;
+			cursor: pointer;
+
+			span {
+				display: block;
+				height: 4px;
+				width: 30px;
+				margin-bottom: 4px;
+				border-radius: 10px;
+				background-color: $color__brand_orange;
+        transition: transform .25s ease-out;
+        &:nth-child(3) {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		ul {
+			pointer-events: auto;
+			flex-direction: column;
+			height: 100vh;
+			padding: 40px 0 90px 0;
+			justify-content: center;
+			align-items: center;
+			transform: translateX(100%);
+			transition: transform .25s ease-out;
+			transition-delay: .1s;
+
+			li {
+				font-size: 1.6em;
+        margin-bottom: 20px;
+			}
+		}
 	}
-	.main-navigation ul {
-		display: block;
+
+	.toggled.main-navigation {
+		// background-color: white;
+    background-color: $color__brand_turquoise;
+    transition-delay: 0;
+    height: 100vh;
+
+		ul {
+			transform: translateX(0);
+      transition-delay: 0;
+		}
+
+		.menu-toggle {
+      transform: rotate(-180deg);
+      transition: transform .25s ease-in-out;
+			span {
+				&:nth-child(1) {
+					transform: translateY(7px) rotate(45deg);
+				}
+
+				&:nth-child(2) {
+					transform: scaleX(0);
+				}
+
+				&:nth-child(3) {
+					transform: translateY(-9px) rotate(-45deg);
+				}
+			}
+		}
 	}
 }
+
+
+
+ul#footer-menu {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  li {
+    font-size: 1rem;
+    margin: 0.2rem 0.8rem;
+    position: relative;
+    text-decoration: none;
+    position: relative;
+    a {
+      color: white;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: -3px;
+      bottom: 1px;
+      height: 3px;
+      background: $color__brand_orange;
+      width: calc(100% + 6px);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.2s ease-out;
+      will-change: transform;
+      z-index: 0;
+    }
+
+    &:hover:after,
+    &.focus:after,
+    &.current-menu-item:after {
+      transform: scaleX(1);
+    }
+  }
+}
+
 
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-
 	.site-main & {
 		margin: 0 0 1.5em;
 		overflow: hidden;

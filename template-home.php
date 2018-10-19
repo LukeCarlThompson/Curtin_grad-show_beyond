@@ -69,7 +69,7 @@ get_header();
             $the_query->the_post();
             ?>
             <div class="graduate-block-wrap">
-              <a href="<?php echo get_permalink() ?>">
+              <a class="graduate-grid-link" data-swup-class="graduate-profile" href="<?php echo get_permalink() ?>">
                 <?php 
                 $image = get_field('profile_picture');
                 if( !empty($image) ): ?>
