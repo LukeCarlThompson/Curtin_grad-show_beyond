@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function() {
         hero.style.perspectiveOrigin = '50% '+ percentScrolledMiddle +'%';
 
         // trigger the leaves animation
-        if (percentScrolled > 10 && percentScrolled < 75 && didPlay == false) {
+        if (percentScrolled > 10 && percentScrolled < 60 && didPlay == false) {
           console.log('here');
           didPlay = true;
           animLeaf(leaf01, path01, 2500);
@@ -155,9 +155,8 @@ document.addEventListener("DOMContentLoaded", function() {
           animLeaf(leaf04, path04, 2400);
         }
 
-        // when #leaves is out of the viewport reset didPlay
-        // so the animation can play again
-        if ( isVisible(leaves) == false && didPlay == true) {
+        // reset didPlay so the animation can play again
+        if (percentScrolled < 5 || percentScrolled > 80 && didPlay == true) {
           didPlay = false;
         }
 
