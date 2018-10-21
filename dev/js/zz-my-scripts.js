@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // THROTTLED SCROLL FUNCTION
   // Vars for the shrinking header on scroll
   var scrollTimeout;
-  var throttle = 20;
+  var throttle = 1000/60;
   // Vars for the things that happen on scrolling
   var nav = document.querySelector("#masthead");
 

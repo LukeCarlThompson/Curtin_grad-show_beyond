@@ -16,17 +16,6 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php
-		// while ( have_posts() ) :
-		// 	the_post();
-
-		// 	get_template_part( 'template-parts/content', 'page' );
-
-		// endwhile; // End of the loop.
-		?>
-
     <div class="hero-section">
 
       <svg class="brand-mark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 821.3 231.05">
@@ -208,6 +197,17 @@ get_header();
       </svg>
     
     </div>
+
+		<main id="main" class="site-main">
+
+		<?php
+		// while ( have_posts() ) :
+		// 	the_post();
+
+		// 	get_template_part( 'template-parts/content', 'page' );
+
+		// endwhile; // End of the loop.
+		?>
 
     <div class="about-section">
       <h2 class="section-heading">Join Us</h2>

@@ -76,7 +76,7 @@
     margin-bottom: 1rem;
   }
   p {
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 auto;
     text-align: center;
   }
@@ -93,8 +93,11 @@
   background-blend-mode: luminosity;
   background-repeat: no-repeat;
   background-size: cover;
-  // background-position: 50%;
+  background-position: 50% 50%;
   background-attachment: fixed;
+  @media (hover: none) {
+    background-attachment: scroll;
+  }
 }
 .details-info-wrap {
   margin: auto;
