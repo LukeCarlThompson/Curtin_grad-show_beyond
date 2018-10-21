@@ -75,7 +75,7 @@
     margin: 0 auto 20px;
     width: 600px;
     max-width: 80vw;
-    transform: translateZ(-1500px) scale(16) translateY(-100px);
+    transform: translateZ(-1500px) scale(16) translateY(-10vh);
     @supports (-moz-appearance:none) {
       transform: translateZ(0) scale(1) translateY(40vh);
     }
