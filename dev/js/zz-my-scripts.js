@@ -109,10 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Vars for hero parallax
   var hero = document.querySelector(".hero-section");
 
-  // var to control the number of pixels scrolled before applying shrink class to the header
-  var shrinkLimit = 200;
-
-  // requestANimation frame throttled scroll function
+  // requestAnimation frame throttled scroll function
   // Setup a timer
   var timeout;
 
@@ -126,23 +123,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // Setup the new requestAnimationFrame()
     timeout = window.requestAnimationFrame(function () {
-          // Run scroll function
-
+        // Run scroll functions
+        
         var scrollAmount = window.pageYOffset;
+        var heroHeight = hero.clientHeight;
+        // get percentage scrolled past the hero section
+        var percentScrolled = scrollAmount / heroHeight * 100;
+
         // Shrink header on scroll
-        if ( scrollAmount > shrinkLimit && !nav.classList.contains('shrink') ) {
+        if ( percentScrolled > 90 && !nav.classList.contains('shrink') ) {
           nav.classList.add("shrink");
-        } else if ( scrollAmount < shrinkLimit && (nav.classList.contains('shrink')) ) {
+        } else if ( percentScrolled < 90 && (nav.classList.contains('shrink')) ) {
           nav.classList.remove("shrink");
         }
 
         // animate perspective origin for parallax effect on hero image
-        var heroHeight = hero.clientHeight;
-          // get percentage scrolled past the hero section
-        var percentScrolled = scrollAmount / heroHeight * 100;
-        // console.log(percentScrolled, 'percentScrolled');
+        // start from 50 instead of 0 for the perspective origin property
         var percentScrolledMiddle = (percentScrolled/2) + 50;
-        // console.log(percentScrolledMiddle, 'percentScrolledMiddle');
         hero.style.perspectiveOrigin = '50% '+ percentScrolledMiddle +'%';
 
         // trigger the leaves animation
