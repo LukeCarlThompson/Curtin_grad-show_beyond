@@ -80,11 +80,31 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // THROTTLED SCROLL FUNCTION
-  // Vars for the shrinking header on scroll
-  var scrollTimeout;
-  var throttle = 16;
   // Vars for the things that happen on scrolling
   var nav = document.querySelector("#masthead");
+  // vars for the leaves and paths
+  var leaves = document.getElementById("leaves");
+  var path01 = anime.path('#leaves #path-01');
+  var path02 = anime.path('#leaves #path-02');
+  var path03 = anime.path('#leaves #path-03');
+  var path04 = anime.path('#leaves #path-04');
+  var leaf01 = document.getElementById("leaf-01");
+  var leaf02 = document.getElementById('leaf-02');
+  var leaf03 = document.getElementById('leaf-03');
+  var leaf04 = document.getElementById('leaf-04');
+  var didPlay = false;
+
+  // function to animate the leaves
+  var animLeaf = function(leaf, path, duration) {
+    anime({
+      targets: leaf,
+      translateX: path('x'),
+      translateY: path('y'),
+      rotate: path('angle'),
+      easing: 'easeOutCubic',
+      duration: duration
+    });
+  }
 
   // Vars for hero parallax
   var hero = document.querySelector(".hero-section");
@@ -124,6 +144,22 @@ document.addEventListener("DOMContentLoaded", function() {
         var percentScrolledMiddle = (percentScrolled/2) + 50;
         // console.log(percentScrolledMiddle, 'percentScrolledMiddle');
         hero.style.perspectiveOrigin = '50% '+ percentScrolledMiddle +'%';
+
+        // trigger the leaves animation
+        if (percentScrolled > 10 && percentScrolled < 75 && didPlay == false) {
+          console.log('here');
+          didPlay = true;
+          animLeaf(leaf01, path01, 2500);
+          animLeaf(leaf02, path02, 2200);
+          animLeaf(leaf03, path03, 2000);
+          animLeaf(leaf04, path04, 2400);
+        }
+
+        // when #leaves is out of the viewport reset didPlay
+        // so the animation can play again
+        if ( isVisible(leaves) == false && didPlay == true) {
+          didPlay = false;
+        }
 
     });
 
