@@ -8,9 +8,7 @@
   width: 100%;
   top: 0;
   right: 0;
-  background-color: $color__brand_turquoise;
   z-index: 1;
-  // justify-content: space-between;
 }
 
 // global styles for every page
@@ -24,7 +22,8 @@
 }
 
 #masthead {
-  transition: transform 0.3s $ease-out-quart;
+  background-color: rgba(0, 0, 0, 0);
+  transition: transform 0.3s $ease-out-quart, background-color 0.5s linear;
   &:after {
     content: "";
     display: block;
@@ -37,10 +36,13 @@
     transition: opacity 0.5s linear;
   }
   &.shrink {
-    transition: transform 0.8s $ease-out-quart;
-    transform: translateY(-50px);
-    &:after {
-      opacity: 0.4;
+    transition: transform 0.8s $ease-out-quart, background-color 0.5s linear;
+    @media screen and (min-width: 700px) {
+      background-color: $color__brand_turquoise;
+      transform: translateY(-50px);
+      &:after {
+        opacity: 0.4;
+      }
     }
   }
 }
@@ -59,23 +61,18 @@
 .hero-section {
   position: relative;
   min-height: 100vh;
-  // background-color: $color__brand_turquoise;
   perspective: 100px;
   transform-style: preserve-3d;
   overflow: hidden;
-  will-change: transform-origin;
-  // perspective-origin: 50% 50%;
-  // transition: perspective-origin 0.3s;
-  // transition: perspective 0.1s, perspective-origin-x 0.1s, perspective-origin-y 0.1s;
+  will-change: perspective-origin;
   .brand-mark {
     display: block;
     position: relative;
     z-index: 10;
-    // padding-top: 10vh;
     margin: 0 auto 20px;
     width: 600px;
     max-width: 80vw;
-    transform: translateZ(-1500px) scale(16) translateY(-10vh);
+    transform: translateZ(-10000px) scale(101) translateY(-3vh);
     @supports (-moz-appearance:none) {
       transform: translateZ(0) scale(1) translateY(40vh);
     }
@@ -83,7 +80,7 @@
 }
 .background {
   background-image: url('images/sky.svg');
-  transform: translateZ(-5000px) scale(51);
+  transform: translateZ(-1000000px) scale(10001);
   z-index: 0;
 }
 .layer-06 {
@@ -100,27 +97,41 @@
 }
 .layer-03 {
   background-image: url('images/layer-03.svg');
-  transform: translateZ(-50px) scale(1.5);
+  transform: translateZ(-100px) scale(2);
 }
 .layer-02 {
   background-image: url('images/layer-02.svg');
-  transform: translateZ(-25px) scale(1.25);
+  transform: translateZ(-50px) scale(1.5);
 }
 .layer-01 {
   background-image: url('images/layer-01.svg');
-  // transform: translateZ(-100px) scale(2);
 }
 .hero-layer {
   height: 100%;
   width: 100%;
   position: absolute;
   background-size: cover;
-  background-position: center bottom;
+  background-position: 50% 50%;
   @supports (-moz-appearance:none) {
     transform: translateZ(0) scale(1);
     background-position: 50% 50%;
   }
 }
+// mobile styles for hero
+@media screen and (max-width: 600px) {
+  .hero-section {
+    min-height: 80vh;
+    .brand-mark {
+      transform: translateZ(-10000px) scale(101) translateY(-10vh);
+    }
+  }
+  .hero-layer:not(.background) {
+    background-size: contain;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+  }
+}
+
 
 
 
@@ -184,9 +195,7 @@
 }
 
 .graduate-block-wrap {
-  // width: calc(25% - 20px);
-  // max-width: 25%;
-  // margin: 10px;
+  max-width: 100%;
   flex: 1 0 400px;
   position: relative;
   overflow: hidden;

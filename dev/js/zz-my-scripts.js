@@ -90,54 +90,43 @@ document.addEventListener("DOMContentLoaded", function() {
   var hero = document.querySelector(".hero-section");
 
   // var to control the number of pixels scrolled before applying shrink class to the header
-  var shrinkLimit = 70;
+  var shrinkLimit = 200;
 
-  window.onscroll = function () {
-      if (!scrollTimeout) {
-          scrollTimeout = setTimeout(function () {
-            var scrollAmount = window.pageYOffset;
+  // requestANimation frame throttled scroll function
+  // Setup a timer
+  var timeout;
 
-            // console.log('scroll amount', scrollAmount);
+  // Listen for resize events
+  window.addEventListener('scroll', function ( event ) {
 
-            // Shrink header on scroll
-            if ( scrollAmount > shrinkLimit && !nav.classList.contains('shrink') ) {
-              nav.classList.add("shrink");
-            } else if ( scrollAmount < shrinkLimit && (nav.classList.contains('shrink')) ) {
-              nav.classList.remove("shrink");
-            }
+    // If there's a timer, cancel it
+    if (timeout) {
+      window.cancelAnimationFrame(timeout);
+    }
 
-            // animate perspective origin for parallax effect on hero image
-            var heroHeight = hero.clientHeight;
-              // get percentage scrolled past the hero section
-            var percentScrolled = scrollAmount / heroHeight * 100;
-            // console.log(percentScrolled, 'percentScrolled');
-            var percentScrolledMiddle = (percentScrolled/2) + 50;
-            // console.log(percentScrolledMiddle, 'percentScrolledMiddle');
-            hero.style.perspectiveOrigin = '50% '+ percentScrolledMiddle +'%';
+      // Setup the new requestAnimationFrame()
+    timeout = window.requestAnimationFrame(function () {
+          // Run scroll function
 
-            // Parallax the hero image/video
-            // var offset = document.querySelector(".about-section").offsetTop;
-            // if (scrollAmount < offset) {
-            //   var moveNum = (scrollAmount / 7500) + 1;
-            //   var eased = moveNum * moveNum * moveNum * moveNum;
-            //   if (eased < 1) {
-            //     var eased = 1;
-            //   };
-            //   hero.style.transform = 'scale(' + eased + ') translateY(' + (eased -1) * 100 + 'px)';
+        var scrollAmount = window.pageYOffset;
+        // Shrink header on scroll
+        if ( scrollAmount > shrinkLimit && !nav.classList.contains('shrink') ) {
+          nav.classList.add("shrink");
+        } else if ( scrollAmount < shrinkLimit && (nav.classList.contains('shrink')) ) {
+          nav.classList.remove("shrink");
+        }
 
-            //   var opacityVal = 2 - (eased * eased * eased);
-            //   hero.style.opacity = opacityVal;
-            // }
+        // animate perspective origin for parallax effect on hero image
+        var heroHeight = hero.clientHeight;
+          // get percentage scrolled past the hero section
+        var percentScrolled = scrollAmount / heroHeight * 100;
+        // console.log(percentScrolled, 'percentScrolled');
+        var percentScrolledMiddle = (percentScrolled/2) + 50;
+        // console.log(percentScrolledMiddle, 'percentScrolledMiddle');
+        hero.style.perspectiveOrigin = '50% '+ percentScrolledMiddle +'%';
 
-              scrollTimeout = null;
-          }, throttle);
-      }
-      // console.log('native scroll');
-  };
+    });
 
-console.log('testing');
-
+  }, false);
 
 });
-
-console.log('testing 02');
