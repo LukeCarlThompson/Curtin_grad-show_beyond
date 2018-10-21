@@ -202,36 +202,36 @@ get_header();
           </g>
         </g>
       </svg>
-
-      <svg id="leaves" xmlns="http://www.w3.org/2000/svg" width="1200" height="560" version="1" viewBox="0 0 1200 560">
-        <defs>
-          <linearGradient id="linearGradient-1" x1="50%" x2="50%" y1="-11%" y2="93%">
-            <stop offset="0%" stop-color="#EDA12B"/>
-            <stop offset="100%" stop-color="#D45817"/>
-          </linearGradient>
-        </defs>
-        <g id="leaves" fill="none" fill-rule="nonzero">
-          <g id="leaf-04" transform="translate(-160 197)">
-            <path id="Path-18" fill="url(#linearGradient-1)" d="M45 40c11-68 68-24 112-39-27 35-86 66-112 39z"/>
-            <path id="Path-18-Copy" fill="#983F01" d="M45 40c31-30 52-16 96-31-42 17-72 2-93 33-14 2-43 10-48-9l4-3C0 49 36 44 45 40z"/>
-          </g>
-          <g id="leaf-03" transform="translate(-150 327)">
-            <path id="Path-18" fill="url(#linearGradient-1)" d="M30 44C24-7 97-5 135 9 123 52 49 74 30 44z"/>
-            <path id="Path-18-Copy" fill="#983F01" d="M30 44c31-30 52-16 96-31-42 17-73 3-94 34-13 8-22 7-32 7l1-3c4 0 24 2 29-7z"/>
-          </g>
-          <g id="leaf-02" transform="translate(-100 459)">
-            <path id="Path-18" fill="url(#linearGradient-1)" d="M23 24C19 13 26 4 43 1c14-2 27 10 48 5-6 24-30 35-48 35-12 0-22-8-20-17z"/>
-            <path id="Path-18-Copy" fill="#983F01" d="M24 23c15 0 34 0 58-12-25 15-46 14-58 14-14-3-19-6-24-9l1-3c3 2 8 7 23 10z"/>
-          </g>
-          <path id="leaf-01" fill="url(#linearGradient-1)" d="M0 16C-2-3 25-2 39 3 35 19 7 27 0 16z" transform="translate(-100 279)"/>
-          <path id="path-01" d="M-107 292c82 48 313 124 470 116s286-12 252-109-150-68-186-16 9 173 140 181 272-311 524-262c168 33 248 49 238 49"/>
-          <path id="path-02" d="M-55 33c13 414 456 380 536 380s170-75 97-114 182-162 371-130c126 21 234 51 325 90"/>
-          <path id="path-03" d="M-107 530c110 9 475-20 655-116 180-97 35-284-68-200-103 85 157 136 194 131 227-26 395 176 512 163 78-8 146-28 204-58"/>
-          <path id="path-04" d="M-62-93c93 285 240 434 440 446 119 7 208-48 200-151-5-61-182-100-143 49 53 201 523 137 593 137 115 0 219 18 313 54"/>
-        </g>
-      </svg>
     
     </div>
+
+    <svg id="leaves" xmlns="http://www.w3.org/2000/svg" width="1200" height="600" version="1" viewBox="0 0 1200 600">
+      <defs>
+        <linearGradient id="linearGradient-1" x1="50%" x2="50%" y1="-11%" y2="93%">
+          <stop offset="0%" stop-color="#EDA12B"/>
+          <stop offset="100%" stop-color="#D45817"/>
+        </linearGradient>
+      </defs>
+      <g fill="none" fill-rule="nonzero">
+        <g id="leaf-04" transform="translate(-160 197)">
+          <path id="Path-18" fill="url(#linearGradient-1)" d="M45 40c11-68 68-24 112-39-27 35-86 66-112 39z"/>
+          <path id="Path-18-Copy" fill="#983F01" d="M45 40c31-30 52-16 96-31-42 17-72 2-93 33-14 2-43 10-48-9l4-3C0 49 36 44 45 40z"/>
+        </g>
+        <g id="leaf-03" transform="translate(-150 327)">
+          <path id="Path-18" fill="url(#linearGradient-1)" d="M30 44C24-7 97-5 135 9 123 52 49 74 30 44z"/>
+          <path id="Path-18-Copy" fill="#983F01" d="M30 44c31-30 52-16 96-31-42 17-73 3-94 34-13 8-22 7-32 7l1-3c4 0 24 2 29-7z"/>
+        </g>
+        <g id="leaf-02" transform="translate(-100 459)">
+          <path id="Path-18" fill="url(#linearGradient-1)" d="M23 24C19 13 26 4 43 1c14-2 27 10 48 5-6 24-30 35-48 35-12 0-22-8-20-17z"/>
+          <path id="Path-18-Copy" fill="#983F01" d="M24 23c15 0 34 0 58-12-25 15-46 14-58 14-14-3-19-6-24-9l1-3c3 2 8 7 23 10z"/>
+        </g>
+        <path id="leaf-01" fill="url(#linearGradient-1)" d="M0 16C-2-3 25-2 39 3 35 19 7 27 0 16z" transform="translate(-100 279)"/>
+        <path id="path-01" d="M-87 61c63 132 329 276 486 268s270-35 236-132-150-68-186-16 9 173 140 181 200-56 453 31c56 23 142 78 257 167"/>
+        <path id="path-02" d="M-68-68a582 582 0 0 0 532 367c80 0 215-69 119-137-96-67-120 152-15 215 60 36 275-24 344-12 126 22 241 87 346 195"/>
+        <path id="path-03" d="M-87 60c446 26 455 450 635 354 180-97 35-284-68-200-103 85 157 136 194 131 227-26 395 176 512 163 78-8 146-28 204-58"/>
+        <path id="path-04" d="M-62-93c93 285 240 434 440 446 119 7 208-48 200-151-5-61-195-99-143 49 53 150 266 114 336 114 115 0 291 65 529 195"/>
+      </g>
+    </svg>
 
 		<main id="main" class="site-main">
 

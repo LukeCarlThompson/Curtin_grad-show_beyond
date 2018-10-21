@@ -14,9 +14,9 @@
 // global styles for every page
 .site-main {
   transform-origin: 50% 200%;
-  perspective: 700px;
-  transform-style: preserve-3d;
-  perspective-origin: 50% -100%;
+  // perspective: 100px;
+  // transform-style: preserve-3d;
+  // perspective-origin: 50% -100%;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -133,7 +133,7 @@
 }
 #leaves {
   position: absolute;
-  bottom: 0;
+  top: 60vh;
   left: -0;
   width: 100%;
   height: auto;
@@ -221,9 +221,11 @@
   .graduate-info-wrap {
     position: absolute;
     background-color: $color__brand_turquoise;
+    opacity: 0.8;
     color: white;
     bottom: 0;
     width: 100%;
+    transition: opacity 0.3s;
   }
   .graduate-name {
     font-size: 1.8rem;
@@ -241,8 +243,11 @@
   }
   &:hover {
     img {
-      transition: transform 5s $ease-out-quart;
+      transition: transform 0.3s $ease-out-quart;
       transform: scale(1.1);
+    }
+    .graduate-info-wrap {
+      opacity: 1;
     }
   }
 }

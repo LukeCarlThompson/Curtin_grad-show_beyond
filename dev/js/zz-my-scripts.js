@@ -146,10 +146,10 @@ document.addEventListener("DOMContentLoaded", function() {
         if (percentScrolled > 10 && percentScrolled < 60 && didPlay == false) {
           console.log('here');
           didPlay = true;
-          animLeaf(leaf01, path01, 2500);
-          animLeaf(leaf02, path02, 2200);
-          animLeaf(leaf03, path03, 2000);
-          animLeaf(leaf04, path04, 2400);
+          animLeaf(leaf01, path01, 3500);
+          animLeaf(leaf02, path02, 3200);
+          animLeaf(leaf03, path03, 2800);
+          animLeaf(leaf04, path04, 3100);
         }
 
         // reset didPlay so the animation can play again
