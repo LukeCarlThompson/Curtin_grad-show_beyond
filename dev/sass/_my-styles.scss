@@ -57,16 +57,72 @@
 // styles for the home page **********************************************************
 
 .hero-section {
+  position: relative;
   min-height: 100vh;
   // background-color: $color__brand_turquoise;
+  perspective: 100px;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  will-change: transform-origin;
+  // perspective-origin: 50% 50%;
+  // transition: perspective-origin 0.3s;
+  // transition: perspective 0.1s, perspective-origin-x 0.1s, perspective-origin-y 0.1s;
   .brand-mark {
     display: block;
-    padding-top: 30vh;
+    position: relative;
+    z-index: 10;
+    // padding-top: 10vh;
     margin: 0 auto 20px;
     width: 600px;
     max-width: 80vw;
+    transform: translateZ(-1500px) scale(16) translateY(-100px);
+    @supports (-moz-appearance:none) {
+      transform: translateZ(0) scale(1) translateY(40vh);
+    }
   }
 }
+.background {
+  background-image: url('images/sky.svg');
+  transform: translateZ(-5000px) scale(51);
+  z-index: 0;
+}
+.layer-06 {
+  background-image: url('images/layer-06.svg');
+  transform: translateZ(-1200px) scale(13);
+}
+.layer-05 {
+  background-image: url('images/layer-05.svg');
+  transform: translateZ(-1000px) scale(11);
+}
+.layer-04 {
+  background-image: url('images/layer-04.svg');
+  transform: translateZ(-400px) scale(5);
+}
+.layer-03 {
+  background-image: url('images/layer-03.svg');
+  transform: translateZ(-50px) scale(1.5);
+}
+.layer-02 {
+  background-image: url('images/layer-02.svg');
+  transform: translateZ(-25px) scale(1.25);
+}
+.layer-01 {
+  background-image: url('images/layer-01.svg');
+  // transform: translateZ(-100px) scale(2);
+}
+.hero-layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center bottom;
+  @supports (-moz-appearance:none) {
+    transform: translateZ(0) scale(1);
+    background-position: 50% 50%;
+  }
+}
+
+
 
 .about-section {
   padding: 10rem 1rem;

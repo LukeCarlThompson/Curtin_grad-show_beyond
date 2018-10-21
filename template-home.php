@@ -17,6 +17,13 @@ get_header();
 
 	<div id="primary" class="content-area">
     <div class="hero-section">
+      <div class="background hero-layer"></div>
+      <div class="layer-06 hero-layer"></div>
+      <div class="layer-05 hero-layer"></div>
+      <div class="layer-04 hero-layer"></div>
+      <div class="layer-03 hero-layer"></div>
+      <div class="layer-02 hero-layer"></div>
+      <div class="layer-01 hero-layer"></div>
 
       <svg class="brand-mark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 821.3 231.05">
         <defs>

@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // THROTTLED SCROLL FUNCTION
   // Vars for the shrinking header on scroll
   var scrollTimeout;
-  var throttle = 1000/60;
+  var throttle = 16;
   // Vars for the things that happen on scrolling
   var nav = document.querySelector("#masthead");
 
@@ -106,18 +106,28 @@ document.addEventListener("DOMContentLoaded", function() {
               nav.classList.remove("shrink");
             }
 
+            // animate perspective origin for parallax effect on hero image
+            var heroHeight = hero.clientHeight;
+              // get percentage scrolled past the hero section
+            var percentScrolled = scrollAmount / heroHeight * 100;
+            // console.log(percentScrolled, 'percentScrolled');
+            var percentScrolledMiddle = (percentScrolled/2) + 50;
+            // console.log(percentScrolledMiddle, 'percentScrolledMiddle');
+            hero.style.perspectiveOrigin = '50% '+ percentScrolledMiddle +'%';
+
             // Parallax the hero image/video
-            var offset = document.querySelector(".about-section").offsetTop;
-            if (scrollAmount < offset) {
-              var moveNum = (scrollAmount / 7500) + 1;
-              var eased = moveNum * moveNum * moveNum * moveNum;
-              if (eased < 1) {
-                var eased = 1;
-              };
-              hero.style.transform = 'scale(' + eased + ') translateY(' + (eased -1) * 100 + 'px)';
-              var opacityVal = 2 - (eased * eased * eased);
-              hero.style.opacity = opacityVal;
-            }
+            // var offset = document.querySelector(".about-section").offsetTop;
+            // if (scrollAmount < offset) {
+            //   var moveNum = (scrollAmount / 7500) + 1;
+            //   var eased = moveNum * moveNum * moveNum * moveNum;
+            //   if (eased < 1) {
+            //     var eased = 1;
+            //   };
+            //   hero.style.transform = 'scale(' + eased + ') translateY(' + (eased -1) * 100 + 'px)';
+
+            //   var opacityVal = 2 - (eased * eased * eased);
+            //   hero.style.opacity = opacityVal;
+            // }
 
               scrollTimeout = null;
           }, throttle);
