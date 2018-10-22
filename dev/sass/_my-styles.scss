@@ -10,6 +10,25 @@
   right: 0;
   z-index: 1;
 }
+.site-branding {
+  background-image: url('images/beyond_brandmark.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin: 20px 0 10px 40px;
+  transform: scale(0.3);
+  opacity: 0;
+  transition: transform 1s $ease-out-slow 0.3s, opacity 0.3s linear;
+  .shrink & {
+    transition: transform 1s $ease-out-slow, opacity 0.3s linear;
+    transform: scale(1);
+    opacity: 1;
+  }
+  .site-title {
+    opacity: 0;
+    margin: 0.6rem 0;
+  }
+}
 
 // global styles for every page
 .site-main {
@@ -24,6 +43,7 @@
 #masthead {
   background-color: rgba(0, 0, 0, 0);
   transition: transform 0.3s $ease-out-quart, background-color 0.5s linear;
+  z-index: 10;
   &:after {
     content: "";
     display: block;
@@ -36,10 +56,9 @@
     transition: opacity 0.5s linear;
   }
   &.shrink {
-    transition: transform 0.8s $ease-out-quart, background-color 0.5s linear;
+    transition: background-color 0.5s linear;
     @media screen and (min-width: 700px) {
-      background-color: $color__brand_turquoise;
-      transform: translateY(-50px);
+      background-color: white;
       &:after {
         opacity: 0.4;
       }

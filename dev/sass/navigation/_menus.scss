@@ -54,6 +54,9 @@
       color: white;
       font-size: 1.5rem;
       font-family: $font__title;
+      .shrink & {
+        color: $color__brand_turquoise;
+      }
 		}
 	}
 
