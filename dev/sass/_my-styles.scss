@@ -209,10 +209,13 @@
 
 .graduates-section {
   padding: 5rem 1rem;
+  .section-heading {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .filter-wrap {
-  
+  margin-bottom: 1.5rem;
 }
 
 .graduate-filter {
@@ -222,37 +225,43 @@
   .filter-item {
     position: relative;
     z-index: 1;
-    margin: 0.8rem;
+    margin: 0.5rem;
     padding: 0.3rem 0.8rem;
-    background-color: $color__brand_turquoise;
-    color: white;
+    // background-color: $color__brand_turquoise;
+    color: $color__brand_orange;
+    font-family: $font__title;
+    font-weight: 700;
+    // font-size: 1.2rem;
+    text-transform: uppercase;
     input {
       position: absolute;
       transform: scale(0);
       + label {
         cursor: pointer;
-          &:before {
-          content: "";
-          display: block;
-          position: absolute;
-          border-radius: 4px;
-          top: -4px;
-          left: -4px;
-          width: calc(100% + 8px);
-          height: calc(100% + 8px);
-          background-color: $color__brand_teal;
-          z-index: -1;
-          transform: scale(0.3);
-          opacity: 0;
-          transition: transform 0.3s ease-out 0.1s, opacity 0.3s linear;
-        }
+        transition: color 0.2s linear;
+        //   &:before {
+        //   content: "";
+        //   display: block;
+        //   position: absolute;
+        //   border-radius: 4px;
+        //   top: -4px;
+        //   left: -4px;
+        //   width: calc(100% + 8px);
+        //   height: calc(100% + 8px);
+        //   background-color: $color__brand_teal;
+        //   z-index: -1;
+        //   transform: scale(0.3);
+        //   opacity: 0;
+        //   transition: transform 0.3s ease-out 0.1s, opacity 0.3s linear;
+        // }
       }
       &:checked {
         + label {
-          &:before {
-            transform: scale(1);
-            opacity: 1;
-          }
+          color: $color__brand_teal;
+          // &:before {
+          //   transform: scale(1);
+          //   opacity: 1;
+          // }
         }
       }
     }
@@ -263,9 +272,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-  perspective-origin: 50% 0%;
+  position: relative;
+  // perspective: 1000px;
+  // transform-style: preserve-3d;
+  // perspective-origin: 50% 0%;
 }
 .graduate-block-wrap {
   max-width: 100%;
@@ -321,11 +331,12 @@
   transform-origin: top center;
   &.hidden {
     position: absolute;
-    order: 99;
     pointer-events: none;
     top: 0;
-    left: 0;
+    // left: 0;
+    // order: 99;
     transform: scale(0);
+    opacity: 0;
   }
   &.visible {
     // border: 2px solid green inset;
