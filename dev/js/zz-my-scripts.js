@@ -164,12 +164,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   // grid filter functionality
-  // when filter button is clicked
-  // get before and after cordinates for each grid item
-  // swap grid wrap class
-  // apply after cordinates transforms to grid items
-  // if item is in the applied filter then animate it to the correct position
-  // if items is not in filter then animate it to zero scale and opacity, position absolute
+  var graduateGridItems = document.querySelectorAll('.graduate-block-wrap');
+  var filterFormInputs = document.querySelectorAll('.graduate-filter .filter-item input');
 
+  // when filter button is clicked
+  for (var i = 0; filterFormInputs.length > i; i++) {
+    filterFormInputs[i].addEventListener('change', function(e) {
+      console.log(e.srcElement.id);
+      onFilterChange(graduateGridItems, e.srcElement.id);
+    });
+  }
 
 });

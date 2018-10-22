@@ -309,8 +309,12 @@ get_header();
           while ( $the_query->have_posts() ) {
             $the_query->the_post();
 
+            // get all the skills associated with this graduate
+            $skills = get_the_terms(get_the_ID(), 'skills');
+            // echo them as classes on the graduate block wrap
+
             ?>
-            <div class="graduate-block-wrap">
+            <div class="graduate-block-wrap all <?php foreach($skills as $skill) { echo $skill->slug . " "; } ?>">
               <a class="graduate-grid-link" data-swup-class="graduate-profile" href="<?php echo get_permalink() ?>">
                 <?php 
                 $image = get_field('profile_picture');

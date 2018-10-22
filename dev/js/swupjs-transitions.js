@@ -26,7 +26,7 @@
 var homeToProfileOut = function(next) {
   anime({
     targets: '.graduate-block-wrap',
-    translateY: -500,
+    // translateY: -500,
     translateZ: 400,
     scale: 0.3,
     opacity: 0,
