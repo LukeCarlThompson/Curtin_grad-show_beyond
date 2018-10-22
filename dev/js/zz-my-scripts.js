@@ -138,9 +138,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // animate perspective origin for parallax effect on hero image
-        // start from 50 instead of 0 for the perspective origin property
-        var percentScrolledMiddle = (percentScrolled/2) + 50;
-        hero.style.perspectiveOrigin = '50% '+ percentScrolledMiddle +'%';
+        if ( percentScrolled < 100 ) {
+          // start from 50 instead of 0 for the perspective origin property
+          var percentScrolledMiddle = (percentScrolled/2) + 50;
+          hero.style.perspectiveOrigin = '50% '+ percentScrolledMiddle +'%';
+        }
 
         // trigger the leaves animation
         if (percentScrolled > 10 && percentScrolled < 60 && didPlay == false) {

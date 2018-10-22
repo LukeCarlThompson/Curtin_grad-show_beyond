@@ -266,7 +266,6 @@ get_header();
     <div class="graduates-section">
       <h2 class="section-heading">The Graduates</h2>
       <div class="filter-wrap">
-        <p>Filter by</p>
         <?php
         $terms = get_terms(array(
             'taxonomy' => 'skills',
