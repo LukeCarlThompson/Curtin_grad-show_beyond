@@ -161,4 +161,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
   }, false);
 
+
+
+  // grid filter functionality
+  // when filter button is clicked
+  // get before and after cordinates for each grid item
+  // swap grid wrap class
+  // apply after cordinates transforms to grid items
+  // if item is in the applied filter then animate it to the correct position
+  // if items is not in filter then animate it to zero scale and opacity, position absolute
+
+
 });

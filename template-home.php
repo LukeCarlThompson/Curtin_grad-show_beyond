@@ -267,6 +267,31 @@ get_header();
       <h2 class="section-heading">The Graduates</h2>
       <div class="filter-wrap">
         <p>Filter by</p>
+        <?php
+        $terms = get_terms(array(
+            'taxonomy' => 'skills',
+            'hide_empty' => true,
+          ));
+          // var_dump($terms);
+          if ( !empty( $terms ) && !is_wp_error( $terms ) ){
+            ?>
+            <form class="graduate-filter">
+              <div class="filter-item">
+                <input type="radio" id="all" name="skills" value="all" checked />
+                <label for="all">All</label>
+              </div>
+              <?php
+              foreach ( $terms as $term ) {
+                ?>
+                <div class="filter-item">
+                  <input type="radio" id="<?php echo $term->slug ?>" name="skills" value="<?php echo $term->name ?>" />
+                  <label for="<?php echo $term->slug ?>"><?php echo $term->name ?></label>
+                </div>
+                <?php
+              }
+            echo "</form>";
+          }
+          ?>
       </div>
       <div class="graduates-grid-wrap">
 
@@ -283,6 +308,7 @@ get_header();
         if ( $the_query->have_posts() ) {
           while ( $the_query->have_posts() ) {
             $the_query->the_post();
+
             ?>
             <div class="graduate-block-wrap">
               <a class="graduate-grid-link" data-swup-class="graduate-profile" href="<?php echo get_permalink() ?>">

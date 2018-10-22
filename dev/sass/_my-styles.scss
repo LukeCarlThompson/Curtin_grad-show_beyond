@@ -195,6 +195,23 @@
   padding: 5rem 1rem;
 }
 
+.graduate-filter {
+  display: flex;
+  flex-wrap: wrap;
+  .filter-item {
+    margin: 0.8rem;
+    padding: 0.3rem 0.8rem;
+    background-color: $color__brand_turquoise;
+    input {
+      position: absolute;
+      transform: scale(0);
+      &:checked + label {
+        color: $color__brand_orange;
+      }
+    }
+  }
+}
+
 .graduates-grid-wrap {
   display: flex;
   flex-wrap: wrap;
