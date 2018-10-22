@@ -19,7 +19,7 @@
   transform: scale(0.3);
   opacity: 0;
   transition: transform 1s $ease-out-slow 0.3s, opacity 0.3s linear;
-  .shrink & {
+  .shrink &, .single-graduate-profile & {
     transition: transform 1s $ease-out-slow, opacity 0.3s linear;
     transform: scale(1);
     opacity: 1;
@@ -52,7 +52,7 @@
     opacity: 0;
     transition: opacity 0.5s linear;
   }
-  &.shrink {
+  &.shrink, .single-graduate-profile & {
     transition: background-color 0.5s linear;
     @media screen and (min-width: 700px) {
       background-color: white;
