@@ -172,8 +172,8 @@ document.addEventListener("DOMContentLoaded", function() {
   // when filter button is clicked
   for (var i = 0; filterFormInputs.length > i; i++) {
     filterFormInputs[i].addEventListener('change', function(e) {
-      console.log(e.srcElement.id);
-      onFilterChange(graduateGridItems, e.srcElement.id);
+      // console.log(e.srcElement.id);
+      onFilterChangeBasic(graduateGridItems, e.srcElement.id);
     });
   }
 

@@ -91,5 +91,47 @@ var onFilterChange = function(elList, activeFilter){
   setTimeout(function(){
     flipAnimNodeList(elList, activeFilter);
   }, 300);
+}
+
+var onFilterChangeBasic = function (elList, activeFilter) {
+  anime({
+    targets: elList,
+    opacity: 0,
+    scaleX: 0.5,
+    scaleY: 0.5,
+    easing: 'easeInOutCubic',
+    duration: 300,
+    delay: function(el, i, l) {
+      return  i * 50;
+    }
+  })
+  .finished.then(function() {
+
+    var activeList = [];
+    for(var i = 0; elList.length > i; i++) {
+      elList[i].classList.remove('visible', 'hidden');
+
+      if( elList[i].classList.contains(activeFilter)) {
+        activeList.push(elList[i])
+        elList[i].classList.add('visible');
+      } else {
+        elList[i].classList.add('hidden');
+      }
+    }
+
+    anime({
+      targets: activeList,
+      opacity: 1,
+      scaleX: [0.5, 1],
+      scaleY: [0.5, 1],
+      easing: 'easeInOutCubic',
+      duration: 300,
+      delay: function(el, i, l) {
+        return  i * 50;
+      }
+    });
+    
+  })
+
 
 }

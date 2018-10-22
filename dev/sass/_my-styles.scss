@@ -273,9 +273,9 @@
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  // perspective: 1000px;
-  // transform-style: preserve-3d;
-  // perspective-origin: 50% 0%;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  perspective-origin: 50% 0%;
 }
 .graduate-block-wrap {
   max-width: 100%;
@@ -328,7 +328,7 @@
   }
 }
 .graduate-block-wrap {
-  transform-origin: top center;
+  // transform-origin: top center;
   &.hidden {
     position: absolute;
     pointer-events: none;
