@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // code...
 
   var swup = new Swupjs({
-    elements: ['.menu', '.site-main'],
+    elements: ['.menu', '.content-area'],
     animateScroll: false,
     debugMode: true,
     LINK_SELECTOR: 'a[href^="' + window.location.origin + '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup])',
