@@ -117,21 +117,21 @@ var onFilterChangeBasic = function (elList, activeFilter) {
       } else {
         elList[i].classList.add('hidden');
       }
-    }
+    };
 
     anime({
       targets: activeList,
-      opacity: 1,
-      scaleX: [0.5, 1],
-      scaleY: [0.5, 1],
-      easing: 'easeInOutCubic',
-      duration: 300,
+      opacity: [{ value: 1, duration: 300, easing: 'linear'}],
+      scale: [
+        { value: 0.5, duration: 0},
+        { value: 1, duration: 500, elasticity: 400}
+      ],
       delay: function(el, i, l) {
         return  i * 50;
       }
     });
     
-  })
+  });
 
 
 }
