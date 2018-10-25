@@ -351,12 +351,11 @@ get_header();
     
     </div>
 
-    <div class="sponsors-section">
-      <h2 class="section-heading">Sponsors</h2>
-    </div>
-
     <div class="contact-section">
-      <h2 class="section-heading">Contact</h2>
+      <h2 class="section-heading">Contact Us</h2>
+        <?php
+        echo do_shortcode('[contact-form-7 id="56" title="Contact form 1"]');
+        ?>
     </div>
 
 		</main><!-- #main -->

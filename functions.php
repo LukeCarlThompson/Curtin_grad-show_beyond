@@ -187,7 +187,7 @@ function admin_menu_remove (){
 
 add_action('admin_menu', 'admin_menu_remove');//adding action for triggering function call
 
-  
+
 
 
 // Require custom post types

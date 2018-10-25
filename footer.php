@@ -15,6 +15,9 @@
 
 	<footer id="colophon" class="site-footer">
     <h3>Footer</h3>
+    <div class="sponsors-section">
+      <h2 class="section-heading">Sponsors</h2>
+    </div>
 		<div class="site-info">
 			<span class="sep"> | </span>
       Site credits
