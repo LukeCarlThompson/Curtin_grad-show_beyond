@@ -92,7 +92,7 @@
   perspective: 100px;
   transform-style: preserve-3d;
   overflow: hidden;
-  will-change: perspective-origin;
+  will-change: perspective;
   .brand-mark {
     display: block;
     position: relative;
