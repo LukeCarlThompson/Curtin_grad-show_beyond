@@ -54,6 +54,18 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+// Run scripts in case user starts on profile page and then navigates back to home page
+document.addEventListener('swup:contentReplaced', event => {
+  // if no hero add shrink to the header
+  if( ! document.querySelector(".hero-section")) {
+    var nav = document.querySelector("#masthead");
+    nav.classList.add("shrink");
+  } else { // Means we are on the homepage
+    console.log('swup', 'On the home page')
+    homePageFunction();
+  };
+});
+
 
 
   // Check if an element is fully in the visible viewport
@@ -77,43 +89,44 @@ document.addEventListener("DOMContentLoaded", function() {
       (top > 0 || bottom > 0) &&
       top < vHeight
     );
-  }
-
-  // THROTTLED SCROLL FUNCTION
-  // Vars for the things that happen on scrolling
-  var nav = document.querySelector("#masthead");
-  // vars for the leaves and paths
-  var leaves = document.getElementById("leaves");
-  var path01 = anime.path('#leaves #path-01');
-  var path02 = anime.path('#leaves #path-02');
-  var path03 = anime.path('#leaves #path-03');
-  var path04 = anime.path('#leaves #path-04');
-  var leaf01 = document.getElementById("leaf-01");
-  var leaf02 = document.getElementById('leaf-02');
-  var leaf03 = document.getElementById('leaf-03');
-  var leaf04 = document.getElementById('leaf-04');
-  var didPlay = false;
-
-  // function to animate the leaves
-  var animLeaf = function(leaf, path, duration) {
-    anime({
-      targets: leaf,
-      translateX: path('x'),
-      translateY: path('y'),
-      rotate: path('angle'),
-      easing: 'easeOutCubic',
-      duration: duration
-    });
-  }
-
-  // Vars for hero parallax
-  var hero = document.querySelector(".hero-section");
+  };
 
   // if no hero add shrink to the header
-  if( ! hero) {
+  if( ! document.querySelector(".hero-section")) {
+    var nav = document.querySelector("#masthead");
     nav.classList.add("shrink");
   } else { // Means we are on the homepage
-    // Setup the scroll listener
+    homePageFunction();
+  };
+
+  function homePageFunction() {
+    // Vars for the things that happen on scrolling
+    var nav = document.querySelector("#masthead");
+    // Vars for hero parallax
+    var hero = document.querySelector(".hero-section");
+    // vars for the leaves and paths
+    var path01 = anime.path('#leaves #path-01');
+    var path02 = anime.path('#leaves #path-02');
+    var path03 = anime.path('#leaves #path-03');
+    var path04 = anime.path('#leaves #path-04');
+    var leaf01 = document.getElementById("leaf-01");
+    var leaf02 = document.getElementById('leaf-02');
+    var leaf03 = document.getElementById('leaf-03');
+    var leaf04 = document.getElementById('leaf-04');
+    var didPlay = false;
+
+    // function to animate the leaves
+    var animLeaf = function(leaf, path, duration) {
+      anime({
+        targets: leaf,
+        translateX: path('x'),
+        translateY: path('y'),
+        rotate: path('angle'),
+        easing: 'easeOutCubic',
+        duration: duration
+      });
+    };
+
     // Register the frame
     var animFrame;
 
@@ -167,20 +180,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     }, false);
 
-  }
+    // grid filter functionality for the home page
+    var graduateGridItems = document.querySelectorAll('.graduate-block-wrap');
+    var filterFormInputs = document.querySelectorAll('.graduate-filter .filter-item input');
 
-
-
-  // grid filter functionality
-  var graduateGridItems = document.querySelectorAll('.graduate-block-wrap');
-  var filterFormInputs = document.querySelectorAll('.graduate-filter .filter-item input');
-
-  // when filter button is clicked
-  for (var i = 0; filterFormInputs.length > i; i++) {
-    filterFormInputs[i].addEventListener('change', function(e) {
-      // console.log(e.srcElement.id);
-      onFilterChangeBasic(graduateGridItems, e.srcElement.id);
-    });
-  }
+    // when filter button is clicked
+    for (var i = 0; filterFormInputs.length > i; i++) {
+      filterFormInputs[i].addEventListener('change', function(e) {
+        onFilterChangeBasic(graduateGridItems, e.srcElement.id);
+      });
+    };
+  };
 
 });
