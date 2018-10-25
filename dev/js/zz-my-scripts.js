@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var swup = new Swupjs({
     elements: ['.menu', '.content-area'],
-    animateScroll: false,
+    animateScroll: true,
     debugMode: true,
     LINK_SELECTOR: 'a[href^="' + window.location.origin + '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup])',
     animations: {
@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
       },
       '*>homepage': {
         out: function (next) {
-          profileToHome(next);
+          profileToHomeOut(next);
         },
         in: function (next) {
-          homeToProfile(next);
+          homeToProfileIn(next);
         }
       },
       'homepage>graduate-profile': {
@@ -109,23 +109,27 @@ document.addEventListener("DOMContentLoaded", function() {
   // Vars for hero parallax
   var hero = document.querySelector(".hero-section");
 
-  // requestAnimation frame throttled scroll function
-  // Setup a timer
-  var timeout;
+  // if no hero add shrink to the header
+  if( ! hero) {
+    nav.classList.add("shrink");
+  } else { // Means we are on the homepage
+    // Setup the scroll listener
+    // Register the frame
+    var animFrame;
 
-  // Listen for resize events
-  window.addEventListener('scroll', function ( event ) {
+    // Listen for scroll events
+    window.addEventListener('scroll', function ( event ) {
 
-    // If there's a timer, cancel it
-    if (timeout) {
-      window.cancelAnimationFrame(timeout);
-    }
+      // If there's an animation frame waiting to run, cancel it
+      if (animFrame) {
+        window.cancelAnimationFrame(animFrame);
+      }
 
       // Setup the new requestAnimationFrame()
-    timeout = window.requestAnimationFrame(function () {
+      animFrame = window.requestAnimationFrame(function () {
         // Run scroll functions
-        
         var scrollAmount = window.pageYOffset;
+
         var heroHeight = hero.clientHeight;
         // get percentage scrolled past the hero section
         var percentScrolled = scrollAmount / heroHeight * 100;
@@ -159,9 +163,11 @@ document.addEventListener("DOMContentLoaded", function() {
           didPlay = false;
         }
 
-    });
+      });
 
-  }, false);
+    }, false);
+
+  }
 
 
 

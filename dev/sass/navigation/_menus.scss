@@ -41,21 +41,25 @@
         transition: transform 0.2s ease-out;
         will-change: transform;
 				z-index: -1;
+        .shrink & {
+          background: $color__brand_turquoise;
+        }
 			}
 
 			&:hover:after,
-      &.focus:after,
-      &.current-menu-item:after {
+      &.focus:after {
 				transform: scaleX(1);
 			}
 		}
 
 		a {
       color: white;
-      font-size: 1.5rem;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+      font-size: 1.4rem;
       font-family: $font__title;
       .shrink &, .single-graduate-profile & {
-        color: $color__brand_turquoise;
+        color: $color__brand_teal;
+        text-shadow: none;
       }
 		}
 	}
@@ -120,10 +124,19 @@
 			transform: translateX(100%);
 			transition: transform .25s ease-out;
 			transition-delay: .1s;
-
-			li {
-				font-size: 1.6em;
+      li {
+        font-size: 1.6em;
         margin-bottom: 20px;
+        .shrink &:after {
+          background-color: white;
+        }
+        a {
+          color: white;
+          text-shadow: none;
+          .shrink &, .single-graduate-profile & {
+            color: white;
+          }
+        }
 			}
 		}
 	}

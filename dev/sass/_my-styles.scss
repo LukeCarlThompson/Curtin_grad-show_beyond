@@ -61,6 +61,18 @@
       }
     }
   }
+  @media screen and (max-width: 700px) {
+    &.shrink {
+      background-color: white;
+      &:after {
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+.page-title {
+  color: $color__brand_orange;
 }
 
 .diamond {
@@ -299,7 +311,7 @@
   img {
     transition: transform 0.5s $ease-out-quart;
     transform-origin: 50% 20%;
-    // mix-blend-mode: overlay;
+    mix-blend-mode: overlay;
   }
   .graduate-info-wrap {
     position: absolute;
@@ -577,4 +589,12 @@ a.portfolio-link {
     transform-origin: right top;
     max-height: 120px;
   }
+}
+
+
+// Error 404 page styles ***********************************
+.error-404 {
+  padding-top: 150px;
+  text-align: center;
+  min-height: 70vh;
 }
