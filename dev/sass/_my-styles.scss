@@ -35,6 +35,7 @@
   transform-origin: 50% 200%;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 1.2rem;
 }
 
 #masthead {
@@ -189,6 +190,7 @@
 
 .details-section {
   padding: 10rem 1rem;
+  margin: 0 -2rem;
   display: flex;
   background-color: $color__brand_orange;
   background-image: url("images/the-bird.jpg");
@@ -456,19 +458,21 @@
 .graduate-profile-top-section {
   // padding: 2rem 4rem 2rem 400px;
   margin-top: 150px;
-}
-.profile-title-wrap {
-  padding: 1rem 4rem 2rem 490px;
+  padding-right: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  position: relative;
   max-width: 1000px;
-  background-color: $color__brand_orange;
-  color: white;
-  z-index: -1;
-  .graduate-name {
-    margin: 1rem 0 0;
-  }
 }
 .folded-corner {
-  position: relative;
+  position: absolute;
+  z-index: -1;
+  height: 7.5rem;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: $color__brand_orange;
   clip-path: polygon(calc(100% - 2.5rem) 0, 100% 2.5rem, 100% 100%, 0 100%, 0 0);
   &:after {
     content: "";
@@ -482,20 +486,39 @@
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
   }
 }
+.profile-img-wrap {
+  margin: 2rem 40px 0 50px;
+  flex: 1 1 300px;
+  box-shadow: 0 40px 30px -30px rgba(0, 0, 0, 0.2), 0 20px 30px -5px rgba(0, 0, 0, 0.1);
+  img {
+    display: block;
+  }
+}
+.profile-top-right-wrap {
+  flex: 1 1 300px;
+  .graduate-name {
+    color: white;
+    margin: 1rem 0 0;
+  }
+  .skills-list {
+    color: white;
+    margin-bottom: 3rem;
+  }
+}
+// .profile-title-wrap {
+//   padding: 1rem 4rem 2rem 490px;
+//   max-width: 1000px;
+//   background-color: $color__brand_orange;
+//   color: white;
+//   z-index: -1;
+//   .graduate-name {
+//     margin: 1rem 0 0;
+//   }
+// }
 .graduate-profile-bottom-section {
   padding: 0 1rem 1rem 0;
   display: flex;
   width: 100%;
-}
-.profile-img-wrap {
-  margin: -100px 40px 0 50px;
-  height: 400px;
-  width: 400px;
-  flex: 0 0 400px;
-  box-shadow: 0 40px 30px -30px rgba(0, 0, 0, 0.2), 0 20px 30px -5px rgba(0, 0, 0, 0.1);
-  img {
-    height: 100%;
-  }
 }
 .graduate-profile-bio-wrap {
   display: flex;
@@ -509,6 +532,9 @@
   }
 }
 
+.view-profile-link-wrap {
+  text-align: center;
+}
 a.portfolio-link {
   color: $color__brand_turquoise;
   font-size: 1.2rem;
@@ -517,6 +543,7 @@ a.portfolio-link {
   text-decoration: none;
   border: 4px solid $color__brand_turquoise;
   padding: 0.5rem 0.8rem;
+  margin: 1rem auto;
 }
 
 .featured-projects-wrap {
@@ -550,6 +577,39 @@ a.portfolio-link {
       box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3);
     }
   }
+}
+
+@media screen and (max-width: 800px) {
+  .graduate-profile-top-section {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-left: 1rem;
+    padding: 0;
+  }
+  .profile-img-wrap, .profile-top-right-wrap {
+    flex: 1 1 auto;
+    max-width: 600px;
+    margin: 1rem;
+  }
+  .profile-top-right-wrap {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .project-preview-wrap {
+    width: calc(100% - 2rem);
+    max-width: 600px;
+    margin: 1rem auto;
+  }
+  // a.portfolio-link {
+  //   color: $color__brand_turquoise;
+  //   font-size: 1.2rem;
+  //   font-weight: bold;
+  //   text-transform: uppercase;
+  //   text-decoration: none;
+  //   border: 4px solid $color__brand_turquoise;
+  //   padding: 0.5rem 0.8rem;
+  //   margin: 1rem auto;
+  // }
 }
 
 // next and prev post nav

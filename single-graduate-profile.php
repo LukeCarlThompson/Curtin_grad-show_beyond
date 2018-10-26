@@ -20,7 +20,17 @@ get_header();
 			// get_template_part( 'template-parts/content', get_post_type() );
       ?>
       <div class="graduate-profile-top-section">
-        <div class="profile-title-wrap folded-corner">
+        <div class="folded-corner"></div>
+        <div class="profile-img-wrap">
+          <?php 
+          $image = get_field('profile_picture');
+          if( !empty($image) ): ?>
+            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+          <?php
+          endif;
+          ?>
+        </div>
+        <div class="profile-top-right-wrap">
           <h1 class="graduate-name"><?php the_field('your_name'); ?></h1>
           <?php 
           $terms = get_field('skills_list');
@@ -33,22 +43,7 @@ get_header();
           <?php
           endif;
           ?>
-        </div>
-      </div>
-
-      <div class="graduate-profile-bottom-section">
-        <div class="profile-img-wrap">
-          <?php 
-          $image = get_field('profile_picture');
-          if( !empty($image) ): ?>
-            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-          <?php
-          endif;
-          ?>
-        </div>
-        <div class="graduate-profile-bio-wrap">
           <p><?php the_field('your_bio') ?></p>
-          <a class="portfolio-link" href="<?php the_field('your_portfolio_website') ?>">Portfolio</a>
         </div>
       </div>
 
@@ -65,8 +60,6 @@ get_header();
               <img src="<?php echo $image[url] ?>" alt="<?php echo $image[alt] ?>" />
               <h3 class="project-preview-title"><?php echo $project_name ?></h3>
             </div>
-
-
             <?php
 
           endwhile;
@@ -76,6 +69,9 @@ get_header();
             <?php
         endif;
         ?>
+      </div>
+      <div class="view-profile-link-wrap">
+        <a class="portfolio-link" href="<?php the_field('your_portfolio_website') ?>">Portfolio</a>
       </div>
 
       <div class="post-nav">
