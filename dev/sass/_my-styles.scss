@@ -462,11 +462,26 @@
   max-width: 1000px;
   background-color: $color__brand_orange;
   color: white;
+  z-index: -1;
   .graduate-name {
     margin: 1rem 0 0;
   }
 }
-
+.folded-corner {
+  position: relative;
+  clip-path: polygon(calc(100% - 2.5rem) 0, 100% 2.5rem, 100% 100%, 0 100%, 0 0);
+  &:after {
+    content: "";
+    display: block;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: $color__brand_turquoise;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+  }
+}
 .graduate-profile-bottom-section {
   padding: 0 1rem 1rem 0;
   display: flex;
@@ -515,11 +530,25 @@ a.portfolio-link {
   // flex: 0 0 30%;
   width: calc(33% - 10px);
   position: relative;
-  h3 {
+  .project-preview-title {
     position: absolute;
     bottom: 0.5rem;
+    padding: 0.5rem 2rem 0.5rem 1rem;
     text-align: center;
-    width: 100%;
+    background-color: $color__brand_turquoise;
+    color: white;
+    clip-path: polygon(calc(100% - 1.2rem) 0, 100% 1.2rem, 100% 100%, 0 100%, 0 0);
+    &:after {
+      content: "";
+      display: block;
+      height: 1.2rem;
+      width: 1.2rem;
+      background-color: $color__brand_orange;
+      position: absolute;
+      top: 0;
+      right: 0;
+      box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.3);
+    }
   }
 }
 

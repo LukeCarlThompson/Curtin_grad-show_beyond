@@ -20,7 +20,7 @@ get_header();
 			// get_template_part( 'template-parts/content', get_post_type() );
       ?>
       <div class="graduate-profile-top-section">
-        <div class="profile-title-wrap">
+        <div class="profile-title-wrap folded-corner">
           <h1 class="graduate-name"><?php the_field('your_name'); ?></h1>
           <?php 
           $terms = get_field('skills_list');
@@ -63,7 +63,7 @@ get_header();
             ?>
             <div class="project-preview-wrap">
               <img src="<?php echo $image[url] ?>" alt="<?php echo $image[alt] ?>" />
-              <h3><?php echo $project_name ?></h3>
+              <h3 class="project-preview-title"><?php echo $project_name ?></h3>
             </div>
 
 
