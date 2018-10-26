@@ -303,17 +303,19 @@
   flex: 0 0 400px;
   position: relative;
   overflow: hidden;
-  // background-color: $color__brand_teal;
-  // &:nth-child(even) {
-  //   background-color: $color__brand_turquoise;
-  // }
   a {
     display: block;
   }
-  img {
-    transition: transform 0.5s $ease-out-quart;
-    transform-origin: 50% 20%;
-    mix-blend-mode: overlay;
+  .profile-image {
+    position: relative;
+    display: block;
+    transition: opacity 0.2s linear;
+  }
+  .profile-image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
   }
   .graduate-info-wrap {
     position: absolute;
@@ -339,9 +341,8 @@
     font-style: italic;
   }
   &:hover {
-    img {
-      transition: transform 0.3s $ease-out-quart;
-      transform: scale(1.1);
+    .profile-image {
+      opacity: 0;
     }
     .graduate-info-wrap {
       opacity: 1;

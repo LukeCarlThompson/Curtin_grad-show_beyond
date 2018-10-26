@@ -321,8 +321,12 @@ get_header();
               <a class="graduate-grid-link" data-swup-class="graduate-profile" href="<?php echo get_permalink() ?>">
                 <?php 
                 $image = get_field('profile_picture');
+                $image_hover = get_field('profile_picture_hover');
+                if( !empty($image_hover) ): ?>
+                  <img src="<?php echo $image_hover['url']; ?>" class="profile-image-hover" alt="<?php echo $image_hover['alt']; ?>" />
+                <?php endif;
                 if( !empty($image) ): ?>
-                  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                  <img src="<?php echo $image['url']; ?>" class="profile-image" alt="<?php echo $image['alt']; ?>" />
                 <?php endif; ?>
                 <div class="graduate-info-wrap">
                   <h2 class="graduate-name"><?php the_field('your_name'); ?></h2>
