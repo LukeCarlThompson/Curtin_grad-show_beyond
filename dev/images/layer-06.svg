@@ -1,22 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="870" viewBox="0 0 1200 870">
   <defs>
-    <path id="path-1" d="M0 291.2v-251c127.8 26.2 151.5 42 462.8-23.2C554.1-2 948.4-2 1235.6 93.2c1.9 139.7 1.9 205.7 0 198-676.7 5-1088.5 5-1235.6 0z"/>
-    <filter id="filter-2" width="102.4%" height="110.4%" x="-1.2%" y="-5.2%" filterUnits="objectBoundingBox">
-      <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
-      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
-      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
-    </filter>
-    <linearGradient id="linearGradient-3" x1="47%" x2="46.2%" y1="33.8%" y2="3.7%">
-      <stop offset="0%" stop-color="#DE7E24"/>
-      <stop offset="100%" stop-color="#FFA76D"/>
+    <linearGradient id="linearGradient-1" x1="54.9%" x2="48.7%" y1="73.2%" y2="0%">
+      <stop offset="0%" stop-color="#25B899"/>
+      <stop offset="100%" stop-color="#D0E2AD"/>
     </linearGradient>
-    <path id="path-4" d="M0 291.7V114.4C227.8 125 283.5 92.2 503 23.6c165.5-51.6 560.8-4.8 732.6 10.6 1.9 124 1.9 209.8 0 257.5C558.9 296 147 296 0 291.7z"/>
-    <filter id="filter-5" width="102.4%" height="110.2%" x="-1.2%" y="-5.1%" filterUnits="objectBoundingBox">
+    <path id="path-2" d="M2.3 350.5V79.1C130 105.4 256.6 114 484.9 34.6 734-52 1117 53.7 1203 51.9c2 139.6 2 239.2 0 298.6H2.3z"/>
+    <filter id="filter-3" width="102.5%" height="108.6%" x="-1.2%" y="-4.3%" filterUnits="objectBoundingBox">
       <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
       <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
       <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
     </filter>
-    <filter id="filter-6" width="396.6%" height="283%" x="-148.3%" y="-91.5%" filterUnits="objectBoundingBox">
+    <linearGradient id="linearGradient-4" x1="51.9%" x2="50%" y1="38%" y2="0%">
+      <stop offset="0%" stop-color="#25B899"/>
+      <stop offset="100%" stop-color="#BBD8AC"/>
+    </linearGradient>
+    <path id="path-5" d="M0 352c1.5-60.7 2.3-128 2.3-201.6C230 161 298.9 133.9 497 60.6c256-94.6 534.3-7.9 706 7.5V352H0z"/>
+    <filter id="filter-6" width="102.5%" height="109%" x="-1.2%" y="-4.5%" filterUnits="objectBoundingBox">
+      <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+    </filter>
+    <filter id="filter-7" width="396.6%" height="283%" x="-148.3%" y="-91.5%" filterUnits="objectBoundingBox">
       <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
       <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
       <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
@@ -25,19 +29,25 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    <linearGradient id="linearGradient-8" x1="39.4%" x2="87.1%" y1="93.2%" y2="15.1%">
+      <stop offset="0%" stop-color="#25B899"/>
+      <stop offset="100%" stop-color="#ACD8C1"/>
+    </linearGradient>
   </defs>
-  <g id="layer-06" fill="none" fill-rule="nonzero" transform="translate(-9 556)">
-    <g id="Path-2-Copy-2">
-      <use fill="#000" filter="url(#filter-2)" xlink:href="#path-1"/>
-      <use fill="#FFB86B" xlink:href="#path-1"/>
-    </g>
-    <g id="Path-2-Copy-7">
-      <use fill="#000" filter="url(#filter-5)" xlink:href="#path-4"/>
-      <use fill="url(#linearGradient-3)" xlink:href="#path-4"/>
-    </g>
-    <g id="Tree-Copy-7" filter="url(#filter-6)" transform="rotate(-7 377.4 -3138.4)">
-      <path id="Path-6" fill="#FF9554" d="M14.8.3c8.9-.5 15.5 10.2 13.6 23-1.8 12.7-24 13-27 3S5.8.8 14.8.3z"/>
-      <path id="Path-5" fill="#946B47" d="M12.7 46.3l1.6-17.6-4.9-2.4 5 .9-1.2-7.1 4-10.8-2.3 11.1 3.5-1.8-2.9 3 1.3 8.6-.7 16.1z"/>
+  <g id="layer-06" fill="none" fill-rule="evenodd">
+    <g id="layer-07" fill-rule="nonzero" transform="translate(-3 519)">
+      <g id="Path-2-Copy-2">
+        <use fill="#000" filter="url(#filter-3)" xlink:href="#path-2"/>
+        <use fill="url(#linearGradient-1)" xlink:href="#path-2"/>
+      </g>
+      <g id="Path-2-Copy-7">
+        <use fill="#000" filter="url(#filter-6)" xlink:href="#path-5"/>
+        <use fill="url(#linearGradient-4)" xlink:href="#path-5"/>
+      </g>
+      <g id="Tree-Copy-7" filter="url(#filter-7)" transform="rotate(-7 676.9 -3070.9)">
+        <path id="Path-6" fill="url(#linearGradient-8)" d="M14.8.3c8.9-.5 15.5 10.2 13.6 23-1.8 12.7-24 13-27 3S5.8.8 14.8.3z"/>
+        <path id="Path-5" fill="#B2935C" d="M12.7 46.3l1.6-17.6-4.9-2.4 5 .9-1.2-7.1 4-10.8-2.3 11.1 3.5-1.8-2.9 3 1.3 8.6-.7 16.1z"/>
+      </g>
     </g>
   </g>
 </svg>

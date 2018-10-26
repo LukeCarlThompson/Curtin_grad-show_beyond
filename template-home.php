@@ -207,9 +207,13 @@ get_header();
 
     <svg id="leaves" xmlns="http://www.w3.org/2000/svg" width="1200" height="600" version="1" viewBox="0 0 1200 600">
       <defs>
-        <linearGradient id="linearGradient-1" x1="50%" x2="50%" y1="-11%" y2="93%">
-          <stop offset="0%" stop-color="#EDA12B"/>
-          <stop offset="100%" stop-color="#D45817"/>
+        <linearGradient id="linearGradient-1" x1="50%" x2="50%" y1="-10.8%" y2="93%">
+          <stop offset="0%" stop-color="#5ECACC"/>
+          <stop offset="100%" stop-color="#12818F"/>
+        </linearGradient>
+        <linearGradient id="linearGradient-2" x1="50%" x2="33.4%" y1="-10.8%" y2="100%">
+          <stop offset="0%" stop-color="#B7E1B6"/>
+          <stop offset="100%" stop-color="#1C9283"/>
         </linearGradient>
       </defs>
       <g fill="none" fill-rule="nonzero">

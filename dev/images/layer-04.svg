@@ -1,26 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="870" viewBox="0 0 1200 870">
   <defs>
-    <linearGradient id="linearGradient-1" x1="44.2%" x2="44.2%" y1="82.8%" y2="33.1%">
-      <stop offset="0%" stop-color="#EE6431"/>
-      <stop offset="100%" stop-color="#FF9439"/>
+    <linearGradient id="linearGradient-1" x1="58.7%" x2="53.9%" y1="64.3%" y2="7.3%">
+      <stop offset="0%" stop-color="#1CA695"/>
+      <stop offset="100%" stop-color="#9DD8CA"/>
     </linearGradient>
-    <path id="path-2" d="M0 375.6V210c77.6 31.4 248 67 469.3 6 84.8-23.4 219.2-57.7 360.9-124 141.6-66.2 233.6-32.4 405.4-21.3 1.9 89.2 1.9 190.8 0 304.9-676.7 3.2-1088.5 3.2-1235.6 0z"/>
-    <filter id="filter-3" width="104.9%" height="118.4%" x="-2.4%" y="-9.2%" filterUnits="objectBoundingBox">
+    <path id="path-2" d="M.3 401V211c77.6 31.4 239.7 66 461 5 84.8-23.4 254-79.5 360.9-124 106.8-44.5 207-30 378.8-19 2 89.2 2 197.5 0 325L.3 401z"/>
+    <filter id="filter-3" width="105%" height="117.7%" x="-2.5%" y="-8.8%" filterUnits="objectBoundingBox">
       <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
       <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
       <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
     </filter>
-    <linearGradient id="linearGradient-4" x1="48.5%" x2="50%" y1="45.5%" y2="61.5%">
-      <stop offset="0%" stop-color="#FF7922"/>
-      <stop offset="100%" stop-color="#DC6600"/>
-    </linearGradient>
-    <path id="path-5" d="M0 375.7v-86.8c462.8 51 573.7-59.1 784.2-142.9 185.8-74 279.6-55.6 451.4-45 1.9 85.4 1.9 177 0 274.7-676.7 3-1088.5 3-1235.6 0z"/>
-    <filter id="filter-6" width="104.9%" height="120.9%" x="-2.4%" y="-10.5%" filterUnits="objectBoundingBox">
-      <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
-      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
-      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
-    </filter>
-    <filter id="filter-7" width="219.4%" height="178.9%" x="-59.7%" y="-39.4%" filterUnits="objectBoundingBox">
+    <filter id="filter-4" width="219.4%" height="178.9%" x="-59.7%" y="-39.4%" filterUnits="objectBoundingBox">
       <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
       <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
       <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
@@ -29,11 +19,11 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <linearGradient id="linearGradient-8" x1="77.8%" x2="19%" y1="0%" y2="86.1%">
-      <stop offset="0%" stop-color="#FDA648"/>
-      <stop offset="100%" stop-color="#D5652A"/>
+    <linearGradient id="linearGradient-5" x1="0%" x2="58.7%" y1="73.6%" y2="0%">
+      <stop offset="0%" stop-color="#1CA695"/>
+      <stop offset="100%" stop-color="#7DCCBC"/>
     </linearGradient>
-    <filter id="filter-9" width="157%" height="131.9%" x="-28.5%" y="-15.9%" filterUnits="objectBoundingBox">
+    <filter id="filter-6" width="157%" height="131.9%" x="-28.5%" y="-15.9%" filterUnits="objectBoundingBox">
       <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
       <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
       <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
@@ -42,27 +32,23 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <linearGradient id="linearGradient-10" x1="88.8%" x2="33.2%" y1="0%" y2="89.9%">
-      <stop offset="0%" stop-color="#FBB753"/>
-      <stop offset="100%" stop-color="#E37A29"/>
+    <linearGradient id="linearGradient-7" x1="0%" x2="58.7%" y1="73.6%" y2="0%">
+      <stop offset="0%" stop-color="#1CA695"/>
+      <stop offset="100%" stop-color="#78C8B9"/>
     </linearGradient>
   </defs>
-  <g id="layer-04" fill="none" fill-rule="nonzero" transform="translate(-9 473)">
+  <g id="layer-04" fill="none" fill-rule="nonzero" transform="translate(-1 473)">
     <g id="Path-2-Copy-5">
       <use fill="#000" filter="url(#filter-3)" xlink:href="#path-2"/>
       <use fill="url(#linearGradient-1)" xlink:href="#path-2"/>
     </g>
-    <g id="Path-2-Copy-4">
-      <use fill="#000" filter="url(#filter-6)" xlink:href="#path-5"/>
-      <use fill="url(#linearGradient-4)" xlink:href="#path-5"/>
+    <g id="Tree-Copy-5" filter="url(#filter-4)" transform="rotate(-5 2368.4 -3544.5)">
+      <path id="Path-6" fill="url(#linearGradient-5)" d="M32.1.7C54.4-3.2 76 23.7 71.3 55 66.5 86 10.5 86.8 3 62.3-4.6 37.8 9.8 4.6 32 .7z"/>
+      <path id="Path-5" fill="#987C59" d="M31.4 108.6l-.2-51.3-8-10 8 4.8 3.1-32.5L36.9 40l4.6-2.4-4.3 5.9 1.6 21.2 9.4-4.7-8.5 9.8 1.8 38.8z" transform="matrix(-1 0 0 1 71.3 0)"/>
     </g>
-    <g id="Tree-Copy-5" filter="url(#filter-7)" transform="rotate(-5 2372.4 -3636)">
-      <path id="Path-6" fill="url(#linearGradient-8)" d="M32.1.7C54.4-3.2 76 23.7 71.3 55 66.5 86 10.5 86.8 3 62.3-4.6 37.8 9.8 4.6 32 .7z"/>
-      <path id="Path-5" fill="#946B47" d="M31.4 108.6l-.2-51.3-8-10 8 4.8 3.1-32.5L36.9 40l4.6-2.4-4.3 5.9 1.6 21.2 9.4-4.7-8.5 9.8 1.8 38.8z" transform="matrix(-1 0 0 1 71.3 0)"/>
-    </g>
-    <g id="Tree-Copy-3" filter="url(#filter-9)" transform="rotate(-5 250.7 -2283.8)">
-      <path id="Path-6" fill="url(#linearGradient-10)" d="M68.5.4c27.8 0 90.6 77 80.5 147.3-10.2 70.2-129.9 72-146 16.7C-13 109 40.6.4 68.5.4z"/>
-      <path id="Path-5" fill="#946B47" d="M64.1 269.3l-.3-116.4-14.6-22.7 14.6 10.9 5.4-73.8 4.8 46.4 8.3-5.5-7.8 13.5 3 48.1 16.7-10.7L79 181.4l3.3 87.9z" transform="matrix(-1 0 0 1 143.5 0)"/>
+    <g id="Tree-Copy-3" filter="url(#filter-6)" transform="rotate(-5 246.7 -2192.2)">
+      <path id="Path-6" fill="url(#linearGradient-7)" d="M68.5.4c27.8 0 90.6 77 80.5 147.3-10.2 70.2-129.9 72-146 16.7C-13 109 40.6.4 68.5.4z"/>
+      <path id="Path-5" fill="#987C59" d="M64.1 269.3l-.3-116.4-14.6-22.7 14.6 10.9 5.4-73.8 4.8 46.4 8.3-5.5-7.8 13.5 3 48.1 16.7-10.7L79 181.4l3.3 87.9z" transform="matrix(-1 0 0 1 143.5 0)"/>
     </g>
   </g>
 </svg>
