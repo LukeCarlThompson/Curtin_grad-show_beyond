@@ -14,13 +14,17 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-    <h3>Footer</h3>
     <div class="sponsors-section">
-      <h2 class="section-heading">Sponsors</h2>
+      <h2 class="section-heading">With special thanks to</h2>
+      <div class="sponsor-logo-wrap">
+        <img src="<?php echo get_template_directory_uri() ?>/images/curtin-university-logo.png" alt="Curtin Univeristy Logo">
+        <img src="<?php echo get_template_directory_uri() ?>/images/the-bird-logo.jpg" alt="The Bird Logo">
+        <img src="<?php echo get_template_directory_uri() ?>/images/the-bird-mess-hall-logo.png" alt="The Bird Mess hall Logo">
+      </div>
     </div>
 		<div class="site-info">
-			<span class="sep"> | </span>
-      Site credits
+      Design by <a href="http://www.morgandigitaldesign.com/">Morgan Murray</a><br>
+      Hero image and Development by <a href="http://lukethompson.com.au">Luke Thompson</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
