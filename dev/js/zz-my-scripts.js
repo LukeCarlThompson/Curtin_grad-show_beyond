@@ -95,9 +95,30 @@ document.addEventListener('swup:contentReplaced', event => {
   if( ! document.querySelector(".hero-section")) {
     var nav = document.querySelector("#masthead");
     nav.classList.add("shrink");
+    imagesLoaded( '.hero-section', { background: true }, pageReady());
   } else { // Means we are on the homepage
     homePageFunction();
   };
+
+  // Removes the loading spinner
+  function pageReady() {
+    document.querySelector('.loading-cover').classList.add('ready');
+    if(document.querySelector('.hero-section')) {
+      console.log('hero section');
+      anime({
+        targets: '.brand-mark',
+        translateZ: ['-10000px','-10000px'],
+        scale: [50, 101],
+        translateY: ['40vh', '-3vh'],
+        easing: [0, 1, 0, 1],
+        duration: 3000,
+        delay: 100,
+        begin: function() {
+          console.log('anim started');
+        }
+      });
+    }
+  }
 
   function homePageFunction() {
     // Vars for the things that happen on scrolling
@@ -126,6 +147,9 @@ document.addEventListener('swup:contentReplaced', event => {
         duration: duration
       });
     };
+
+    // remove loading cover when hero image has loaded
+    imagesLoaded( '.hero-section', { background: true }, pageReady());
 
     // Register the frame
     var animFrame;

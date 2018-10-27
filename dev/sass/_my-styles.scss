@@ -30,6 +30,19 @@
   }
 }
 
+.loading-cover {
+  background-color: white;
+  position: absolute;
+  z-index: 1000;
+  height: 100%;
+  width: 100vw;
+  pointer-events: none;
+  transition: opacity 0.3s linear;
+  &.ready {
+    opacity: 0;
+  }
+}
+
 // global styles for every page
 .site-main {
   transform-origin: 50% 200%;
