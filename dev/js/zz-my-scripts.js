@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
       },
       '*>next-profile': {
         out: function (next) {
-          console.log('next profile out');
           nextProfileOut(next);
         },
         in: function (next) {
@@ -44,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function() {
       },
       '*>prev-profile': {
         out: function (next) {
-          console.log('next profile out');
           prevProfileOut(next);
         },
         in: function (next) {
@@ -61,7 +59,6 @@ document.addEventListener('swup:contentReplaced', event => {
     var nav = document.querySelector("#masthead");
     nav.classList.add("shrink");
   } else { // Means we are on the homepage
-    console.log('swup', 'On the home page')
     homePageFunction();
   };
 });
@@ -104,7 +101,6 @@ document.addEventListener('swup:contentReplaced', event => {
   function pageReady() {
     document.querySelector('.loading-cover').classList.add('ready');
     if(document.querySelector('.hero-section')) {
-      console.log('hero section');
       anime({
         targets: '.brand-mark',
         translateZ: ['-10000px','-10000px'],
@@ -112,10 +108,7 @@ document.addEventListener('swup:contentReplaced', event => {
         translateY: ['40vh', '-3vh'],
         easing: [0, 1, 0, 1],
         duration: 3000,
-        delay: 100,
-        begin: function() {
-          console.log('anim started');
-        }
+        delay: 100
       });
     }
   }
@@ -187,7 +180,6 @@ document.addEventListener('swup:contentReplaced', event => {
 
         // trigger the leaves animation
         if (percentScrolled > 10 && percentScrolled < 60 && didPlay == false) {
-          console.log('here');
           didPlay = true;
           animLeaf(leaf01, path01, 3500);
           animLeaf(leaf02, path02, 3200);
