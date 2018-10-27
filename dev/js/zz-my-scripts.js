@@ -99,18 +99,8 @@ document.addEventListener('swup:contentReplaced', event => {
 
   // Removes the loading spinner
   function pageReady() {
+    document.querySelector('.site-content').classList.add('ready');
     document.querySelector('.loading-cover').classList.add('ready');
-    if(document.querySelector('.hero-section')) {
-      anime({
-        targets: '.brand-mark',
-        translateZ: ['-10000px','-10000px'],
-        scale: [50, 101],
-        translateY: ['40vh', '-3vh'],
-        easing: [0, 1, 0, 1],
-        duration: 3000,
-        delay: 100
-      });
-    }
   }
 
   function homePageFunction() {

@@ -114,9 +114,13 @@
     margin: 0 auto 20px;
     width: 600px;
     max-width: 80vw;
-    transform: translateZ(-10000px) scale(101) translateY(-3vh);
+    transform: translateZ(-10000px) scale(50) translateY(40vh);
     @supports (-moz-appearance:none) {
       transform: translateZ(0) scale(1) translateY(40vh);
+    }
+    .ready & {
+      transition: transform 3s $ease-out-slow 0.1s;
+      transform: translateZ(-10000px) scale(101) translateY(-3vh);
     }
   }
 }
