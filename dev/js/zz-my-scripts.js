@@ -132,7 +132,10 @@ document.addEventListener('swup:contentReplaced', event => {
     };
 
     // remove loading cover when hero image has loaded
-    imagesLoaded( '.hero-section', { background: true }, pageReady());
+    // imagesLoaded( '.hero-section', { background: true }, pageReady());
+    setTimeout(function() {
+      pageReady();
+    }, 500);
 
     // Register the frame
     var animFrame;
