@@ -116,7 +116,7 @@
     max-width: 80vw;
     transform: translateZ(-10000px) scale(50) translateY(40vh);
     @supports (-moz-appearance:none) {
-      // transform: translateZ(0) scale(1) translateY(40vh);
+      transform: translateZ(0) scale(1) translateY(40vh);
     }
     .ready & {
       transition: transform 3s $ease-out-slow 0.1s;
