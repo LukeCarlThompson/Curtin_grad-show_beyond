@@ -118,7 +118,7 @@ var profileToHomeIn = function(next) {
 var nextProfileOut = function(next) {
   anime({
     targets: '.site-main',
-    rotate: '-45deg',
+    rotate: '-25deg',
     opacity: 0,
     duration: 200,
     easing: 'easeInCubic',
@@ -130,7 +130,7 @@ var nextProfileIn = function(next) {
   anime.timeline()
     .add({
       targets: '.site-main',
-      rotate: ['45deg', 0],
+      rotate: ['25deg', 0],
       opacity: [0, 1],
       easing: [0, 1, 0, 1],
     })
@@ -177,7 +177,7 @@ var nextProfileIn = function(next) {
 var prevProfileOut = function(next) {
   anime({
     targets: '.site-main',
-    rotate: '45deg',
+    rotate: '25deg',
     opacity: 0,
     duration: 200,
     easing: 'easeInCubic',
@@ -190,7 +190,7 @@ var prevProfileIn = function(next) {
     anime.timeline()
     .add({
       targets: '.site-main',
-      rotate: ['-45deg', 0],
+      rotate: ['-25deg', 0],
       opacity: [0, 1],
       easing: [0, 1, 0, 1],
     })

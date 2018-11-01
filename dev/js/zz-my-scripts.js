@@ -165,7 +165,9 @@ document.addEventListener('swup:contentReplaced', event => {
         }
 
         // animate perspective origin for parallax effect on hero image
-        if ( percentScrolled < 100 ) {
+        // check for firefox and don't run the animation if it is
+        var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+        if ( percentScrolled < 100 && ! isFirefox ) {
           // start from 50 instead of 0 for the perspective origin property
           var percentScrolledMiddle = (percentScrolled/2) + 50;
           hero.style.perspectiveOrigin = '50% '+ percentScrolledMiddle +'%';

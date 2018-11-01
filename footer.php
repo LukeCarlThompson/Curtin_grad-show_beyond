@@ -17,9 +17,8 @@
     <div class="sponsors-section">
       <h2 class="section-heading">With special thanks to</h2>
       <div class="sponsor-logo-wrap">
-        <img src="<?php echo get_template_directory_uri() ?>/images/curtin-university-logo.png" alt="Curtin Univeristy Logo">
-        <img src="<?php echo get_template_directory_uri() ?>/images/the-bird-logo.jpg" alt="The Bird Logo">
         <img src="<?php echo get_template_directory_uri() ?>/images/the-bird-mess-hall-logo.png" alt="The Bird Mess hall Logo">
+        <img src="<?php echo get_template_directory_uri() ?>/images/curtin-university-logo.png" alt="Curtin Univeristy Logo">
       </div>
     </div>
 		<div class="site-info">

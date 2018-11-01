@@ -110,13 +110,13 @@
   .brand-mark {
     display: block;
     position: relative;
-    z-index: 10;
+    // z-index: 1;
     margin: 0 auto 20px;
     width: 600px;
     max-width: 80vw;
     transform: translateZ(-10000px) scale(50) translateY(40vh);
     @supports (-moz-appearance:none) {
-      transform: translateZ(0) scale(1) translateY(40vh);
+      // transform: translateZ(0) scale(1) translateY(40vh);
     }
     .ready & {
       transition: transform 3s $ease-out-slow 0.1s;
@@ -207,7 +207,7 @@
 
 .details-section {
   padding: 10rem 1rem;
-  margin: 0 -2rem;
+  margin: 0;
   display: flex;
   background-color: $color__brand_orange;
   background-image: url("images/the-bird.jpg");
@@ -471,8 +471,11 @@
     align-items: center;
     img {
       margin: 1rem;
-      width: 150px;
+      width: 120px;
       height: 100%;
+      &:first-child {
+        width: 200px;
+      }
     }
   }
 }
