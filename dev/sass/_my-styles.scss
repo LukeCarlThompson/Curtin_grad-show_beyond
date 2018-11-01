@@ -197,8 +197,8 @@
   }
   p {
     max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
+    margin: 0 auto 1rem;
+    // text-align: center;
   }
   .diamond {
     margin: 2rem auto;
@@ -209,8 +209,8 @@
   padding: 10rem 1rem;
   margin: 0;
   display: flex;
-  background-color: $color__brand_orange;
-  background-image: url("images/the-bird.jpg");
+  // background-color: $color__brand_orange;
+  // background-image: url("images/the-bird.jpg");
   background-blend-mode: luminosity;
   background-repeat: no-repeat;
   background-size: cover;
@@ -224,7 +224,7 @@
   margin: auto;
   background-color: white;
   padding: 2rem 2rem 1rem;
-  box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5), 0 20px 40px rgba(0, 0, 0, 0.5);
+  // box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.1);
   text-align: center;
   h2 {
     margin: 0.5rem 0.5rem;
@@ -463,6 +463,12 @@
 // Footer styles *****************
 .sponsors-section {
   padding: 5rem 1rem 1rem;
+  .sponsors-heading {
+    text-align: center;
+    color: $color__brand_orange;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
   .sponsor-logo-wrap {
     margin-top: -2rem;
     display: flex;
@@ -481,11 +487,16 @@
 }
 
 .site-info {
-  padding: 1rem 1rem 2rem;
+  padding: 2rem 1rem 2rem;
   text-align: center;
   color: lighten($color__text-main, 20%);
   a {
-    font-weight: bold;
+    // font-weight: bold;
+    color: lighten($color__text-main, 20%);
+  }
+  span {
+    text-transform: uppercase;
+    font-size: 0.8rem;
   }
 }
 

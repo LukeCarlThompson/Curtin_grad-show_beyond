@@ -251,8 +251,18 @@ get_header();
 
     <div class="about-section" id="about">
       <h2 class="section-heading">Join Us</h2>
-      <p>Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <span class="diamond"></span>
+      <p>Join us for an evening of celebration as Curtain’s Digital Design students present their portfolios, and grow BEYOND University into the Design Industry.</p>
+      <p>From the disciplines of Web, User Interface/User Experience, Interaction, 3D, Motion Graphics and Animation Design, works will be on display for one night only, to demonstrate the diverse creative talent that is produced out of Curtain’s Design course.</p>
+      <p>Industry members are invited to attend this cocktail style networking event, review students’ works, and interact with these fresh graduates. Meet us at The Bird Mess Hall, William Street, Northbridge, and see the fresh potential of Perth's digital design.</p>
+      <!-- <span class="diamond"></span> -->
+
+      <div class="details-info-wrap">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"><title>icon location</title><g class="nc-icon-wrapper" fill="#f58f3b"><path class="heroicon-ui" d="M5.64 16.36a9 9 0 1 1 12.72 0l-5.65 5.66a1 1 0 0 1-1.42 0l-5.65-5.66zm11.31-1.41a7 7 0 1 0-9.9 0L12 19.9l4.95-4.95zM12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></g></svg>
+        <h2 class="section-heading">5pm - 6:30pm<br>Thursday 22nd November</h2>
+        <h3>The Bird</h3>
+        <p>181 William St, Northbridge</p>
+        <span class="diamond"></span>
+      </div>
     
     </div>
 
@@ -262,17 +272,30 @@ get_header();
       </div>
     </div>
 
-    <div class="details-section" id="details">
+    <!-- <div class="details-section" id="details">
 
       <div class="details-info-wrap">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"><title>icon location</title><g class="nc-icon-wrapper" fill="#f58f3b"><path class="heroicon-ui" d="M5.64 16.36a9 9 0 1 1 12.72 0l-5.65 5.66a1 1 0 0 1-1.42 0l-5.65-5.66zm11.31-1.41a7 7 0 1 0-9.9 0L12 19.9l4.95-4.95zM12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></g></svg>
-        <h2 class="section-heading">November 23rd / 6pm</h2>
+        <h2 class="section-heading">6pm<br>Thursday 22nd November</h2>
         <h3>The Bird</h3>
         <p>181 William St, Northbridge</p>
         <span class="diamond"></span>
       </div>
     
-    </div>
+    </div> -->
+
+    <?php
+    $args = array(
+      'post_type' => array( 'graduate-profile' ),
+      'post_status' => array( 'publish' ),
+      'orderby' => 'menu_order',
+    );
+    // The Query
+    $the_query = new WP_Query( $args );
+
+    // The Loop
+    if ( $the_query->have_posts() ) {
+    ?>
 
     <div class="graduates-section" id="graduates">
       <h2 class="section-heading">The Graduates</h2>
@@ -306,16 +329,17 @@ get_header();
       <div class="graduates-grid-wrap">
 
         <?php
-        $args = array(
-          'post_type' => array( 'graduate-profile' ),
-          'post_status' => array( 'publish' ),
-          'orderby' => 'menu_order',
-        );
-        // The Query
-        $the_query = new WP_Query( $args );
+        // $args = array(
+        //   'post_type' => array( 'graduate-profile' ),
+        //   'post_status' => array( 'publish' ),
+        //   'orderby' => 'menu_order',
+        // );
+        // // The Query
+        // $the_query = new WP_Query( $args );
 
-        // The Loop
-        if ( $the_query->have_posts() ) {
+        // // The Loop
+        // if ( $the_query->have_posts() ) {
+          
           while ( $the_query->have_posts() ) {
             $the_query->the_post();
 
@@ -353,16 +377,18 @@ get_header();
             </div>
             <?php
           }
-          /* Restore original Post Data */
-          wp_reset_postdata();
-        } else {
-          // no posts found
-        }
-        ?>
-      
+          ?>
       </div>
     
     </div>
+
+    <?php
+    /* Restore original Post Data */
+      wp_reset_postdata();
+    } else {
+      // no posts found
+    }
+    ?>
 
     <div class="contact-section" id="contact">
       <h2 class="section-heading">Contact Us</h2>
