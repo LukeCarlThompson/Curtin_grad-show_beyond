@@ -251,8 +251,8 @@ get_header();
 
     <div class="about-section" id="about">
       <h2 class="section-heading">Join Us</h2>
-      <p>Join us for an evening of celebration as Curtain’s Digital Design students present their portfolios, and grow BEYOND University into the Design Industry.</p>
-      <p>From the disciplines of Web, User Interface/User Experience, Interaction, 3D, Motion Graphics and Animation Design, works will be on display for one night only, to demonstrate the diverse creative talent that is produced out of Curtain’s Design course.</p>
+      <p>Join us for an evening of celebration as Curtin’s Digital Design students present their portfolios, and grow BEYOND University into the Design Industry.</p>
+      <p>From the disciplines of Web, User Interface/User Experience, Interaction, 3D, Motion Graphics and Animation Design, works will be on display for one night only, to demonstrate the diverse creative talent that is produced out of Curtin’s Design course.</p>
       <p>Industry members are invited to attend this cocktail style networking event, review students’ works, and interact with these fresh graduates. Meet us at The Bird Mess Hall, William Street, Northbridge, and see the fresh potential of Perth's digital design.</p>
       <!-- <span class="diamond"></span> -->
 
