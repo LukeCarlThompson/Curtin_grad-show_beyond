@@ -262,7 +262,7 @@ get_header();
     
     </div>
 
-    <div class="video-section">
+    <div class="video-section" id="video-teaser">
       <div class="video-wrap">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/wGN4nsFnlls?showinfo=0&modestbranding=1&loop=1&rel=0" frameborder="0"  encrypted-media" allowfullscreen></iframe>
       </div>
