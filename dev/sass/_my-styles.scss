@@ -204,7 +204,7 @@
   p {
     max-width: 600px;
     margin: 0 auto 1rem;
-    // text-align: center;
+    text-align: center;
   }
   .diamond {
     margin: 2rem auto;
@@ -240,7 +240,7 @@
     font-size: 1.8rem;
     margin: 0;
   }
-  p {
+  .address {
     font-familY: $font__title;
     font-weight: 700;
     font-size: 1.4rem;
@@ -249,6 +249,16 @@
   .diamond {
     margin-bottom: 1rem;
   }
+}
+
+.bird-logo-bg {
+  height: 5rem;
+  width: 20rem;
+  max-width: 100%;
+  background-image: url('images/the-bird-mess-hall-logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
 }
 
 .graduates-section {

@@ -240,27 +240,23 @@ get_header();
 
 		<main id="main" class="site-main">
 
-		<?php
-		// while ( have_posts() ) :
-		// 	the_post();
-
-		// 	get_template_part( 'template-parts/content', 'page' );
-
-		// endwhile; // End of the loop.
-		?>
-
     <div class="about-section" id="about">
       <h2 class="section-heading">Join Us</h2>
-      <p>Join us for an evening of celebration as Curtin’s Digital Design students present their portfolios, and grow BEYOND University into the Design Industry.</p>
-      <p>From the disciplines of Web, User Interface/User Experience, Interaction, 3D, Motion Graphics and Animation Design, works will be on display for one night only, to demonstrate the diverse creative talent that is produced out of Curtin’s Design course.</p>
-      <p>Industry members are invited to attend this cocktail style networking event, review students’ works, and interact with these fresh graduates. Meet us at The Bird Mess Hall, William Street, Northbridge, and see the fresh potential of Perth's digital design.</p>
+      <p>Join us for an evening of celebration as Curtin’s 2018 Digital students present their portfolios, and grow BEYOND University into the Design Industry.</p>
+
+      <p>From the disciplines of Web, User Interface/User Experience, Interaction, 3D, Motion Graphics and Animation Design, works will be on display for one night only, to demonstrate the diverse creative talent that is produced out of Curtin’s Digital Design and Animation and Games Design course.</p>
       <!-- <span class="diamond"></span> -->
 
       <div class="details-info-wrap">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"><title>icon location</title><g class="nc-icon-wrapper" fill="#f58f3b"><path class="heroicon-ui" d="M5.64 16.36a9 9 0 1 1 12.72 0l-5.65 5.66a1 1 0 0 1-1.42 0l-5.65-5.66zm11.31-1.41a7 7 0 1 0-9.9 0L12 19.9l4.95-4.95zM12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></g></svg>
         <h2 class="section-heading">5pm - 6:30pm<br>Thursday 22nd November</h2>
-        <h3>The Bird</h3>
-        <p>181 William St, Northbridge</p>
+        <h3>The Bird Mess Hall</h3>
+        <p class="address">175 William St, Northbridge</p>
+        <p>The Bird Mess Hall is the official sponsor of BEYOND.</p>
+        <div class="bird-logo-bg"></div>
+        <p>Industry members are invited to attend this cocktail-style networking event, review students’ works, and interact with these fresh graduates.</p>
+        <p>Graduates’ full online folios will be published soon.
+        In the meantime, scroll down to view the Pre-Event Teaser Video.</p>
         <span class="diamond"></span>
       </div>
     
@@ -268,21 +264,9 @@ get_header();
 
     <div class="video-section">
       <div class="video-wrap">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/-9HqnhIh7_U?showinfo=0&modestbranding=1&loop=1&rel=0" frameborder="0"  encrypted-media" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wGN4nsFnlls?showinfo=0&modestbranding=1&loop=1&rel=0" frameborder="0"  encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
-
-    <!-- <div class="details-section" id="details">
-
-      <div class="details-info-wrap">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"><title>icon location</title><g class="nc-icon-wrapper" fill="#f58f3b"><path class="heroicon-ui" d="M5.64 16.36a9 9 0 1 1 12.72 0l-5.65 5.66a1 1 0 0 1-1.42 0l-5.65-5.66zm11.31-1.41a7 7 0 1 0-9.9 0L12 19.9l4.95-4.95zM12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></g></svg>
-        <h2 class="section-heading">6pm<br>Thursday 22nd November</h2>
-        <h3>The Bird</h3>
-        <p>181 William St, Northbridge</p>
-        <span class="diamond"></span>
-      </div>
-    
-    </div> -->
 
     <?php
     $args = array(
