@@ -31,6 +31,7 @@ get_header();
           ?>
         </div>
         <div class="profile-top-right-wrap">
+          <div class="folded-corner"></div>
           <h1 class="graduate-name"><?php the_field('your_name'); ?></h1>
           <?php 
           $terms = get_field('skills_list');
@@ -54,11 +55,23 @@ get_header();
           while ( have_rows('featured_project') ) : the_row();
             $image = get_sub_field('project_preview');
 		        $project_name = get_sub_field('project_name');
+            $project_description = get_sub_field('project_description');
 
             ?>
             <div class="project-preview-wrap">
-              <img src="<?php echo $image[url] ?>" alt="<?php echo $image[alt] ?>" />
-              <h3 class="project-preview-title"><?php echo $project_name ?></h3>
+              <div class="project-preview-img-wrap">
+                <img src="<?php echo $image[url] ?>" alt="<?php echo $image[alt] ?>" />
+                <h3 class="project-preview-title"><?php echo $project_name ?></h3>
+              </div>
+              <?php
+              if($project_description) {
+                ?>
+                <div class="project-preview-description">
+                  <?php echo $project_description ?>
+                </div>
+                <?php
+              }
+              ?>
             </div>
             <?php
 
