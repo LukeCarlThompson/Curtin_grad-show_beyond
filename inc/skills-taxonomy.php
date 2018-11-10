@@ -32,6 +32,7 @@ function graduate_skills() {
 		'show_ui'                    => true,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
+    'meta_box_cb'                => false,
 		'show_tagcloud'              => true,
 	);
 	register_taxonomy( 'skills', array( 'graduate-profile' ), $args );
