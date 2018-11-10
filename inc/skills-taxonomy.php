@@ -25,6 +25,12 @@ function graduate_skills() {
 		'items_list'                 => __( 'Skills list', 'text_domain' ),
 		'items_list_navigation'      => __( 'Skills list navigation', 'text_domain' ),
 	);
+  $capabilities = array(
+		'manage_terms'               => 'edit_posts',
+		'edit_terms'                 => 'edit_posts',
+		'delete_terms'               => 'edit_posts',
+		'assign_terms'               => 'edit_posts',
+	);
 	$args = array(
 		'labels'                     => $labels,
 		'hierarchical'               => false,
@@ -34,6 +40,7 @@ function graduate_skills() {
 		'show_in_nav_menus'          => true,
     'meta_box_cb'                => false,
 		'show_tagcloud'              => true,
+    'capabilities'               => $capabilities,
 	);
 	register_taxonomy( 'skills', array( 'graduate-profile' ), $args );
 
