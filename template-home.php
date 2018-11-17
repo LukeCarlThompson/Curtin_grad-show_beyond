@@ -255,8 +255,6 @@ get_header();
         <p>The Bird Mess Hall is the official sponsor of BEYOND.</p>
         <div class="bird-logo-bg"></div>
         <p>Industry members are invited to attend this cocktail-style networking event, review students’ works, and interact with these fresh graduates.</p>
-        <p>Graduates’ full online folios will be published soon.
-        In the meantime, scroll down to view the Pre-Event Teaser Video.</p>
         <span class="diamond"></span>
       </div>
     
