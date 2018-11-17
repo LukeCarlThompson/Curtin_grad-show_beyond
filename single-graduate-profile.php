@@ -44,7 +44,7 @@ get_header();
           <?php
           endif;
           ?>
-          <p><?php the_field('your_bio') ?></p>
+          <p class="student-bio"><?php the_field('your_bio') ?></p>
         </div>
       </div>
 
