@@ -553,8 +553,12 @@
 }
 .profile-img-wrap {
   margin: 2rem 40px 0 50px;
-  flex: 1 1 300px;
+  flex: 0 1 30%;
+  max-width: 400px;
   box-shadow: 0 40px 30px -30px rgba(0, 0, 0, 0.2), 0 20px 30px -5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 5;
+  transform: translateZ(0);
   img {
     display: block;
   }
@@ -572,6 +576,7 @@
   .skills-list {
     color: white;
     margin-bottom: 3rem;
+    background-color: $color__brand_orange;
   }
 }
 

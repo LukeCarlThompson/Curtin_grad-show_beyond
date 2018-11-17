@@ -122,7 +122,7 @@ get_header();
               </div>
               <?php
             endif;
-            echo "<div class='nav-thumbnail-text'><h3>Next</h3><span>" . get_field('your_name', $prevPost->ID) . "</span></div>";
+            echo "<div class='nav-thumbnail-text'><h3>Next</h3><span>" . get_field('your_name', $nextPost->ID) . "</span></div>";
           ?>
           </a>
           <?php

@@ -134,15 +134,15 @@ var nextProfileIn = function(next) {
       opacity: [0, 1],
       easing: [0, 1, 0, 1],
     })
-    .add({
-      targets: '.profile-img-wrap',
-      opacity: [0, 1],
-      translateX: [200, 0],
-      translateZ: [-200, 0],
-      rotate: ['90deg', 0],
-      easing: [0, 1, 0, 1],
-      offset: 0
-    })
+    // .add({
+    //   targets: '.profile-img-wrap',
+    //   opacity: [0, 1],
+    //   translateX: [200, 0],
+    //   translateZ: [-200, 0],
+    //   rotate: ['90deg', 0],
+    //   easing: [0, 1, 0, 1],
+    //   offset: 0
+    // })
     .add({
       targets: '.graduate-profile-top-section',
       opacity: [0, 1],
@@ -194,15 +194,15 @@ var prevProfileIn = function(next) {
       opacity: [0, 1],
       easing: [0, 1, 0, 1],
     })
-    .add({
-      targets: '.profile-img-wrap',
-      opacity: [0, 1],
-      translateX: [-200, 0],
-      translateZ: [-200, 0],
-      rotate: ['-90deg', 0],
-      easing: [0, 1, 0, 1],
-      offset: 0
-    })
+    // .add({
+    //   targets: '.profile-img-wrap',
+    //   opacity: [0, 1],
+    //   translateX: [-200, 0],
+    //   translateZ: [-200, 0],
+    //   rotate: ['-90deg', 0],
+    //   easing: [0, 1, 0, 1],
+    //   offset: 0
+    // })
     .add({
       targets: '.graduate-profile-top-section',
       opacity: [0, 1],
