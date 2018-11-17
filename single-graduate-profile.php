@@ -45,6 +45,9 @@ get_header();
           endif;
           ?>
           <p class="student-bio"><?php the_field('your_bio') ?></p>
+          <div class="view-profile-link-wrap">
+            <a class="portfolio-link" target="_blank" href="<?php the_field('your_portfolio_website') ?>">View Portfolio</a>
+          </div>
         </div>
       </div>
 
@@ -82,9 +85,6 @@ get_header();
             <?php
         endif;
         ?>
-      </div>
-      <div class="view-profile-link-wrap">
-        <a class="portfolio-link" href="<?php the_field('your_portfolio_website') ?>">Portfolio</a>
       </div>
 
       <div class="post-nav">
