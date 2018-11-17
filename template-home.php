@@ -272,7 +272,9 @@ get_header();
     $args = array(
       'post_type' => array( 'graduate-profile' ),
       'post_status' => array( 'publish' ),
-      'orderby' => 'menu_order',
+      'orderby' => 'title',
+      'order' => 'ASC',
+      'posts_per_page' => -1,
     );
     // The Query
     $the_query = new WP_Query( $args );
