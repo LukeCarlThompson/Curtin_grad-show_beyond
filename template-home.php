@@ -293,7 +293,7 @@ get_header();
       <div class="filter-wrap">
         <?php
         $terms = get_terms(array(
-            'taxonomy' => 'skills',
+            'taxonomy' => 'category',
             'hide_empty' => true,
           ));
           // var_dump($terms);
@@ -306,12 +306,15 @@ get_header();
               </div>
               <?php
               foreach ( $terms as $term ) {
-                ?>
-                <div class="filter-item">
-                  <input type="radio" id="<?php echo $term->slug ?>" name="skills" value="<?php echo $term->name ?>" />
-                  <label for="<?php echo $term->slug ?>"><?php echo $term->name ?></label>
-                </div>
-                <?php
+                if($term->slug == 'uncategorized') {
+                } else {
+                  ?>
+                  <div class="filter-item">
+                    <input type="radio" id="<?php echo $term->slug ?>" name="skills" value="<?php echo $term->name ?>" />
+                    <label for="<?php echo $term->slug ?>"><?php echo $term->name ?></label>
+                  </div>
+                  <?php
+                }
               }
             echo "</form>";
           }
@@ -320,26 +323,15 @@ get_header();
       <div class="graduates-grid-wrap">
 
         <?php
-        // $args = array(
-        //   'post_type' => array( 'graduate-profile' ),
-        //   'post_status' => array( 'publish' ),
-        //   'orderby' => 'menu_order',
-        // );
-        // // The Query
-        // $the_query = new WP_Query( $args );
-
-        // // The Loop
-        // if ( $the_query->have_posts() ) {
-          
           while ( $the_query->have_posts() ) {
             $the_query->the_post();
 
             // get all the skills associated with this graduate
-            $skills = get_the_terms(get_the_ID(), 'skills');
+            $categorys = get_the_terms(get_the_ID(), 'category');
             // echo them as classes on the graduate block wrap
 
             ?>
-            <div class="graduate-block-wrap all <?php foreach($skills as $skill) { echo $skill->slug . " "; } ?>">
+            <div class="graduate-block-wrap all <?php foreach($categorys as $category) { echo $category->slug . " "; } ?>">
               <a class="graduate-grid-link" data-swup-class="graduate-profile" href="<?php echo get_permalink() ?>">
                 <?php 
                 $image = get_field('profile_picture');

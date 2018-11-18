@@ -354,7 +354,7 @@
   .profile-image {
     position: relative;
     display: block;
-    transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear 0.1s;
   }
   .profile-image-hover {
     position: absolute;
@@ -364,19 +364,49 @@
   }
   .graduate-info-wrap {
     position: absolute;
-    background-color: $color__brand_turquoise;
-    opacity: 0.8;
+    z-index: 1;
+    overflow: hidden;
+    background-color: rgba($color__brand_turquoise, 0.6);
     color: white;
     bottom: 0;
     width: 100%;
-    transition: opacity 0.3s;
+    min-height: 6.5rem;
+    &:after {
+      content: "";
+      width: 500px;
+      height: 500px;
+      border-radius: 100%;
+      background-color: $color__brand_teal;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate( -50%, -50%) scale(0);
+      opacity: 0;
+      z-index: -1;
+      transition: transform 0.1s $ease-out-quart 0.3s, opacity 0.4s;
+    }
+    &:before {
+      content: "";
+      width: 500px;
+      height: 500px;
+      border-radius: 100%;
+      background-color: $color__brand_turquoise;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate( -50%, -50%) scale(0);
+      opacity: 0;
+      z-index: -2;
+      transition: transform 0.1s $ease-out-quart 0.3s, opacity 0.4s;
+    }
   }
   .graduate-name {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-align: center;
     margin: 10px 0 0;
   }
   .skills-list {
+    font-size: 0.8rem;
     justify-content: center;
     padding: 0 0.8rem 0.8rem;
   }
@@ -390,7 +420,17 @@
       opacity: 0;
     }
     .graduate-info-wrap {
-      opacity: 1;
+      &:after {
+        transform: translate( -50%, -50%) scale(1);
+        opacity: 1;
+        transition: transform 0.7s $ease-out-quart 0.1s, opacity 0.3s linear 0.1s;
+
+      }
+      &:before {
+        transform: translate( -50%, -50%) scale(1);
+        opacity: 1;
+        transition: transform 0.7s $ease-out-quart, opacity 0.3s;
+      }
     }
   }
 }
@@ -543,15 +583,10 @@
   flex-wrap: wrap;
   align-items: flex-start;
   position: relative;
-  // max-width: 1000px;
 }
 .new-folded-corner {
   position: relative;
-  // z-index: -1;
-  // height: 8.2rem;
-  // width: 300%;
   top: 0;
-  // left: -200%;
   padding: 0 3rem 1rem 0;
   background-color: $color__brand_orange;
   clip-path: polygon(calc(100% - 2.5rem) 0, 100% 2.5rem, 100% 100%, -100% 100%, -100% 0);
@@ -574,7 +609,6 @@
     width: 200%;
     background-color: $color__brand_orange;
     right: 100%;
-    // right: 0;
   }
 }
 .profile-img-wrap {
