@@ -16,6 +16,12 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
+    <img class="load-first" style="display: none;" src="<?php echo get_template_directory_uri() ?>/images/layer-01.svg">
+    <img class="load-first" style="display: none;" src="<?php echo get_template_directory_uri() ?>/images/layer-02.svg">
+    <img class="load-first" style="display: none;" src="<?php echo get_template_directory_uri() ?>/images/layer-03.svg">
+    <img class="load-first" style="display: none;" src="<?php echo get_template_directory_uri() ?>/images/layer-04.svg">
+    <img class="load-first" style="display: none;" src="<?php echo get_template_directory_uri() ?>/images/layer-05.svg">
+    <img class="load-first" style="display: none;" src="<?php echo get_template_directory_uri() ?>/images/layer-06.svg">
     <div class="hero-section">
       <div class="background hero-layer"></div>
 

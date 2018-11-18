@@ -94,10 +94,15 @@ document.addEventListener('swup:contentReplaced', event => {
     nav.classList.add("shrink");
     pageReady()
   } else { // Means we are on the homepage
-    imagesLoaded( '.hero-section', { background: '.hero-layer' }, homePageFunction());
+    imagesLoaded( '.load-first', function() {
+      pageReady();
+      console.log('images loaded');
+    });
+    homePageFunction();
+    // pageReady();
   };
 
-  // Removes the loading spinner
+  // Removes the loading cover
   function pageReady() {
     document.querySelector('.site-content').classList.add('ready');
     document.querySelector('.loading-cover').classList.add('ready');
@@ -130,12 +135,6 @@ document.addEventListener('swup:contentReplaced', event => {
         duration: duration
       });
     };
-
-    // remove loading cover when hero image has loaded
-    // imagesLoaded( '.hero-section', { background: true }, pageReady());
-    setTimeout(function() {
-      pageReady();
-    }, 500);
 
     // Register the frame
     var animFrame;

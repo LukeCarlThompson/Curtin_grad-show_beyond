@@ -120,13 +120,15 @@
     margin: 0 auto 20px;
     width: 600px;
     max-width: 80vw;
+    opacity: 0;
     transform: translateZ(-10000px) scale(50) translateY(40vh);
     @supports (-moz-appearance:none) {
       transform: translateZ(0) scale(1) translateY(40vh);
     }
     .ready & {
-      transition: transform 3s $ease-out-slow 0.1s;
+      transition: transform 3s $ease-out-slow 0.4s, opacity 3s $ease-out-slow 0.4s;
       transform: translateZ(-10000px) scale(101) translateY(-3vh);
+      opacity: 1;
     }
   }
 }
@@ -164,6 +166,7 @@
   position: absolute;
   background-size: cover;
   background-position: 50% 50%;
+  animation: fade-in 0.7s linear;
   @supports (-moz-appearance:none) {
     transform: translateZ(0) scale(1);
     background-position: 50% 50%;
@@ -189,6 +192,15 @@
   left: -0;
   width: 100%;
   height: auto;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 
