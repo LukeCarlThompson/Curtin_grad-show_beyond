@@ -37,7 +37,7 @@ function graduate_profile() {
 		'description'           => __( 'Graduate Profile', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'thumbnail', 'revisions', 'custom-fields' ),
-		'taxonomies'            => array( 'your_skills' ),
+		'taxonomies'            => array( 'your_skills', 'category'),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
