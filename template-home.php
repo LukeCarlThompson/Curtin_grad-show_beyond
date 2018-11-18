@@ -22,6 +22,7 @@ get_header();
     <img class="load-first" style="display: none;" src="<?php echo get_template_directory_uri() ?>/images/layer-04.svg">
     <img class="load-first" style="display: none;" src="<?php echo get_template_directory_uri() ?>/images/layer-05.svg">
     <img class="load-first" style="display: none;" src="<?php echo get_template_directory_uri() ?>/images/layer-06.svg">
+    <img class="load-first" style="display: none;" src="<?php echo get_template_directory_uri() ?>/images/sky.svg">
     <div class="hero-section">
       <div class="background hero-layer"></div>
 
