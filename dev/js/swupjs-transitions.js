@@ -27,15 +27,14 @@ var homeToProfileOut = function(next) {
   anime({
     targets: '.graduate-block-wrap',
     // translateY: -500,
-    translateZ: 400,
-    scale: 0.3,
+    // translateZ: 400,
+    scale: 0.9,
     opacity: 0,
-    duration: 400,
+    duration: 200,
     delay: function(el, i, l) {
-      return i * 50;
+      return i * 30;
     },
     easing: 'easeInSine',
-    begin: console.log('hello'),
     complete: next
   })
 }
@@ -43,17 +42,17 @@ var homeToProfileOut = function(next) {
 var homeToProfileIn = function(next) {
   anime.timeline()
     .add({
-      targets: '.profile-img-wrap',
-      opacity: [0, 1],
-      scale: [0.5, 1],
-      easing: 'easeOutCubic',
-      duration: 400,
-      // offset: '-=200'
-    })
-    .add({
       targets: '.graduate-profile-top-section',
       opacity: [0, 1],
-      translateX: [-100, 0],
+      translateY: [100, 0],
+      easing: 'easeOutCubic',
+      duration: 400,
+      delay: 400
+    })
+    .add({
+      targets: '.profile-img-wrap',
+      opacity: [0, 1],
+      scale: [0.9, 1],
       easing: 'easeOutCubic',
       duration: 400,
       offset: '-=200'
@@ -61,7 +60,7 @@ var homeToProfileIn = function(next) {
     .add({
       targets: '.graduate-profile-bio-wrap',
       opacity: [0, 1],
-      translateX: [-100, 0],
+      translateY: [100, 0],
       easing: 'easeOutCubic',
       duration: 400,
       offset: '-=200'
@@ -78,15 +77,6 @@ var homeToProfileIn = function(next) {
       },
       complete: next
     })
-  // anime({
-  //   targets: '.site-main',
-  //   opacity: [0, 1],
-  //   translateX: [100, 0],
-  //   duration: 400,
-  //   easing: 'easeOutCubic',
-  //   begin: console.log('hello'),
-  //   complete: next
-  // })
 }
 
 
