@@ -1,26 +1,3 @@
-
-// // Get the link that was clicked
-// document.addEventListener('swup:clickLink', event => {
-//     console.log('clickedLink event', event);
-// });
-
-// // Get all the graduate profile links
-// // assign the clicked link to a global variable
-// var graduateGridLinks = document.querySelectorAll('.graduate-grid-link');
-// var clickedGridLink;
-
-// for(var i = 0; graduateGridLinks.length > i; i++) {
-//   graduateGridLinks[i].addEventListener('swup:clickLink', function(e) {
-//     clickedGridlink = this;
-//     // console.log('this', this);
-//     // console.log('event', clickedGridlink);
-//   } )
-// }
-
-
-
-
-
 // page transition functions
 
 var homeToProfileOut = function(next) {
@@ -86,7 +63,6 @@ var profileToHomeOut = function(next) {
   anime({
     targets: '.site-main',
     opacity: 0,
-    // translateX: '-100vw',
     duration: 200,
     easing: 'easeInCubic',
     complete: next
@@ -97,7 +73,6 @@ var profileToHomeIn = function(next) {
   anime({
     targets: '.site-main',
     opacity: [0, 1],
-    // translateX: ['100vw', 0],
     duration: 400,
     easing: 'easeOutCubic',
     complete: next
@@ -124,15 +99,6 @@ var nextProfileIn = function(next) {
       opacity: [0, 1],
       easing: [0, 1, 0, 1],
     })
-    // .add({
-    //   targets: '.profile-img-wrap',
-    //   opacity: [0, 1],
-    //   translateX: [200, 0],
-    //   translateZ: [-200, 0],
-    //   rotate: ['90deg', 0],
-    //   easing: [0, 1, 0, 1],
-    //   offset: 0
-    // })
     .add({
       targets: '.graduate-profile-top-section',
       opacity: [0, 1],
@@ -184,15 +150,6 @@ var prevProfileIn = function(next) {
       opacity: [0, 1],
       easing: [0, 1, 0, 1],
     })
-    // .add({
-    //   targets: '.profile-img-wrap',
-    //   opacity: [0, 1],
-    //   translateX: [-200, 0],
-    //   translateZ: [-200, 0],
-    //   rotate: ['-90deg', 0],
-    //   easing: [0, 1, 0, 1],
-    //   offset: 0
-    // })
     .add({
       targets: '.graduate-profile-top-section',
       opacity: [0, 1],
