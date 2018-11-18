@@ -20,7 +20,6 @@ get_header();
 			// get_template_part( 'template-parts/content', get_post_type() );
       ?>
       <div class="graduate-profile-top-section">
-        <div class="folded-corner"></div>
         <div class="profile-img-wrap">
           <?php 
           $image = get_field('profile_picture');
@@ -31,19 +30,20 @@ get_header();
           ?>
         </div>
         <div class="profile-top-right-wrap">
-          <div class="folded-corner"></div>
-          <h1 class="graduate-name"><?php the_field('your_name'); ?></h1>
-          <?php 
-          $terms = get_field('skills_list');
-          if( $terms ): ?>
-            <ul class="skills-list">
-            <?php foreach( $terms as $term ): ?>
-              <li class="skills-list-item"><?php echo $term->name; ?></li>
-            <?php endforeach; ?>
-            </ul>
-          <?php
-          endif;
-          ?>
+          <div class="new-folded-corner">
+            <h1 class="graduate-name"><?php the_field('your_name'); ?></h1>
+            <?php 
+            $terms = get_field('skills_list');
+            if( $terms ): ?>
+              <ul class="skills-list">
+              <?php foreach( $terms as $term ): ?>
+                <li class="skills-list-item"><?php echo $term->name; ?></li>
+              <?php endforeach; ?>
+              </ul>
+            <?php
+            endif;
+            ?>
+          </div>
           <p class="student-bio"><?php the_field('your_bio') ?></p>
           <div class="view-profile-link-wrap">
             <a class="portfolio-link" target="_blank" href="<?php the_field('your_portfolio_website') ?>">View Portfolio</a>

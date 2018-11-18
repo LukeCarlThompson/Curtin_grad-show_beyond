@@ -439,6 +439,7 @@
       border-radius: 0;
       padding: 0.7rem 3rem;
       margin: 2rem auto 0;
+      border: none;
       display: block;
       cursor: pointer;
       color: white;
@@ -446,9 +447,11 @@
       font-weight: 700;
       font-family: $font__title;
       text-transform: uppercase;
-      transition: transform 0.2s ease-out;
+      box-shadow: $shadow;
+      transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
       &:hover, &:active {
-        transform: scale(1.05);
+        transform: translateY(5px) scale(0.98);
+        box-shadow: $shadow-hover;
       }
     }
   }
@@ -530,15 +533,16 @@
   position: relative;
   // max-width: 1000px;
 }
-.folded-corner {
-  position: absolute;
-  z-index: -1;
-  height: 8.2rem;
-  width: 150%;
+.new-folded-corner {
+  position: relative;
+  // z-index: -1;
+  // height: 8.2rem;
+  // width: 300%;
   top: 0;
-  right: 0;
+  // left: -200%;
+  padding: 0 3rem 1rem 0;
   background-color: $color__brand_orange;
-  clip-path: polygon(calc(100% - 2.5rem) 0, 100% 2.5rem, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(calc(100% - 2.5rem) 0, 100% 2.5rem, 100% 100%, -100% 100%, -100% 0);
   &:after {
     content: "";
     display: block;
@@ -549,6 +553,16 @@
     top: 0;
     right: 0;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+  }
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 200%;
+    background-color: $color__brand_orange;
+    right: 100%;
+    // right: 0;
   }
 }
 .profile-img-wrap {
@@ -567,16 +581,13 @@
   flex: 1 1 300px;
   max-width: 600px;
   position: relative;
-  .folded-corner{
-    display: none;
-  }
   .graduate-name {
     color: white;
     margin: 1rem 0 0;
   }
   .skills-list {
     color: white;
-    margin-bottom: 3rem;
+    // margin-bottom: 3rem;
     background-color: $color__brand_orange;
   }
   .student-bio {
@@ -614,11 +625,13 @@ a.portfolio-link {
   background-color: $color__brand_turquoise;
   font-weight: 700;
   font-family: $font__title;
+  box-shadow: $shadow;
   text-transform: uppercase;
   display: inline-block;
-  transition: transform 0.2s ease-out;
+  transition: box-shadow 0.3s $ease-out-quart, transform 0.3s $ease-out-quart;
   &:hover, &:active {
-    transform: scale(1.05);
+    transform: translateY(5px) scale(0.98);
+    box-shadow: $shadow-hover;
   }
 }
 
@@ -666,9 +679,6 @@ a.portfolio-link {
     align-items: center;
     padding-left: 1rem;
     padding: 0;
-    .folded-corner {
-      display: none;
-    }
     .profile-img-wrap {
       max-width: 500px;
       margin: 0 2rem 2rem;
@@ -676,12 +686,6 @@ a.portfolio-link {
   }
   .profile-top-right-wrap {
     flex: 1 1 300px;
-    position: relative;
-    .folded-corner {
-      display: block;
-      width: 150%;
-      right: 0;
-    }
   }
 }
 
@@ -728,32 +732,9 @@ a.portfolio-link {
   max-width: 150px;
   position: relative;
   img {
-    transform: scale(0.8);
-    // opacity: 0;
-    transition: opacity 0.3s linear 0.1s, transform 0.4s $ease-in-quart;
+    box-shadow: $shadow;
+    transition: box-shadow 0.3s $ease-out-quart, transform 0.3s $ease-out-quart;
   }
-  // &:before {
-  //   content: "";
-  //   position: absolute;
-  //   display: block;
-  //   height: 100px;
-  //   width: 80px;
-  //   @media screen and (max-width: 640px) {
-  //     height: 80px;
-  //     width: 40px;
-  //   }
-  //   box-shadow: 10px 15px 30px -5px hsla(0, 0, 0, 0.2);
-  //   top: -10%;
-  //   z-index: 0;
-  //   .prev-post-link & {
-  //     left: -30px;
-  //     background-color: $color__brand_teal;
-  //   }
-  //   .next-post-link & {
-  //     right: -30px;
-  //     background-color: $color__brand_teal;
-  //   }
-  // }
 }
 
 .prev-post-link, .next-post-link {
@@ -766,9 +747,8 @@ a.portfolio-link {
   }
   justify-content: center;
   &:hover img {
-    transition: opacity 0.3s linear, transform 0.5s $ease-out-quart;
-    opacity: 1;
-    transform: scale(1);
+    transform: translateY(5px) scale(0.98);
+    box-shadow: $shadow-hover;
   }
   span {
     font-weight: 600;
