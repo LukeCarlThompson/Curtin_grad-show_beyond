@@ -92,9 +92,9 @@ document.addEventListener('swup:contentReplaced', event => {
   if( ! document.querySelector(".hero-section")) {
     var nav = document.querySelector("#masthead");
     nav.classList.add("shrink");
-    imagesLoaded( '.hero-section', { background: true }, pageReady());
+    pageReady()
   } else { // Means we are on the homepage
-    homePageFunction();
+    imagesLoaded( '.hero-section', { background: '.hero-layer' }, homePageFunction());
   };
 
   // Removes the loading spinner
