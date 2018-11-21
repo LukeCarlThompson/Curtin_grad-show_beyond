@@ -128,7 +128,7 @@
 			transition: transform .25s ease-out;
 			transition-delay: .1s;
       li {
-        font-size: 1.6em;
+        // font-size: 1.6em;
         margin-bottom: 20px;
         .shrink &:after {
           background-color: white;
@@ -136,6 +136,7 @@
         a {
           color: white;
           text-shadow: none;
+          font-size: 1.8rem;
           .shrink &, .single-graduate-profile & {
             color: white;
           }

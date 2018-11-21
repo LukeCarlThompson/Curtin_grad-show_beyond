@@ -96,11 +96,18 @@ document.addEventListener('swup:contentReplaced', event => {
   } else { // Means we are on the homepage
     imagesLoaded( '.load-first', function() {
       pageReady();
-      console.log('images loaded');
+      // console.log('images loaded');
     });
     homePageFunction();
     // pageReady();
   };
+
+  // Do the page ready function after 3s even if the images haven't loaded yet
+  setTimeout(function(){
+    if( ! document.querySelector('.loading-cover').classList.contains('ready')) {
+      pageReady();
+    }
+  },3000);
 
   // Removes the loading cover
   function pageReady() {
