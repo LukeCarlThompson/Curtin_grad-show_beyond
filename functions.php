@@ -120,7 +120,7 @@ add_action( 'widgets_init', 'beyond_widgets_init' );
  * Enqueue scripts and styles.
  */
 function beyond_scripts() {
-	wp_enqueue_style( 'beyond-style', get_stylesheet_uri(). array(), '201801', 'all' );
+	wp_enqueue_style( 'beyond-style', get_stylesheet_uri(), array(), '201801', 'all' );
 
   wp_enqueue_style('beyond-google-fonts', "https://fonts.googleapis.com/css?family=Quantico:400,700", false );
 
