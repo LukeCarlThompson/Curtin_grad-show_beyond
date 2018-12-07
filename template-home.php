@@ -248,28 +248,87 @@ get_header();
 		<main id="main" class="site-main">
 
     <div class="about-section" id="about">
-      <h2 class="section-heading">Join Us</h2>
-      <p>Join us for an evening of celebration as Curtin’s 2018 Digital students present their portfolios, and grow BEYOND University into the Design Industry.</p>
+      <h2 class="section-heading">Welcome</h2>
+      <p>The 2018 VIP/Industry Grad Show “Blended” was held on Thursday 22nd November 2018, and was hosted AND sponsored by The Bird Mess Hall Function Centre.</p>
 
-      <p>From the disciplines of Web, User Interface/User Experience, Interaction, 3D, Motion Graphics and Animation Design, works will be on display for one night only, to demonstrate the diverse creative talent that is produced out of Curtin’s Digital Design and Animation and Games Design course.</p>
-      <!-- <span class="diamond"></span> -->
+      <div class="bird-logo-bg"></div>
 
-      <div class="details-info-wrap">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"><title>icon location</title><g class="nc-icon-wrapper" fill="#f58f3b"><path class="heroicon-ui" d="M5.64 16.36a9 9 0 1 1 12.72 0l-5.65 5.66a1 1 0 0 1-1.42 0l-5.65-5.66zm11.31-1.41a7 7 0 1 0-9.9 0L12 19.9l4.95-4.95zM12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></g></svg>
-        <h2 class="section-heading">5pm - 6:30pm<br>Thursday 22nd November</h2>
-        <h3>The Bird Mess Hall</h3>
-        <p class="address">175 William St, Northbridge</p>
-        <p>The Bird Mess Hall is the official sponsor of BEYOND.</p>
-        <div class="bird-logo-bg"></div>
-        <p>Industry members are invited to attend this cocktail-style networking event, review students’ works, and interact with these fresh graduates.</p>
-        <span class="diamond"></span>
+      <p>Graduates present their portfolios, from the disciplines of Web, User Interface/User Experience, Interaction, 3D, Motion Graphics and Animation Design, from the Digital Design Major and Animation and Games Design Major.</p>
+    </div>
+
+    <div class="award-winners-wrap">
+      <h2 class="section-heading">Congratulations to the industry award winners</h2>
+      <div class="award-grid-wrap">
+        <div class="award-block">
+          <div class="award-logo">
+            <img src="<?php echo get_template_directory_uri() ?>/images/bam.png">
+          </div>
+          <p class="award-label">the BAM Creative Award for Creative Talent</p>
+          <p class="award-winner">Carla Marinescu</p>
+        </div>
+        <div class="award-block">
+          <div class="award-logo">
+            <img src="<?php echo get_template_directory_uri() ?>/images/boogie_monster.png">
+          </div>
+          <p class="award-label">the Boogie Monster Award for Motion Design</p>
+          <p class="award-winner">Joshua De Boer</p>
+        </div>
+        <div class="award-block">
+          <div class="award-logo">
+            <img src="<?php echo get_template_directory_uri() ?>/images/cvw.png">
+          </div>
+          <p class="award-label">the CVW Creative Award for Online Design</p>
+          <p class="award-winner">Luke Thompson</p>
+        </div>
+        <div class="award-block">
+          <div class="award-logo">
+            <img src="<?php echo get_template_directory_uri() ?>/images/dux.png">
+          </div>
+          <p class="award-label">the Dux Digital Award for User Interface Design</p>
+          <p class="award-winner">David Whitehouse</p>
+        </div>
+        <div class="award-block">
+          <div class="award-logo">
+            <img src="<?php echo get_template_directory_uri() ?>/images/glide.png">
+          </div>
+          <p class="award-label">the Glide Award for Brand Presence</p>
+          <p class="award-winner">Francine Cruz</p>
+        </div>
+        <div class="award-block">
+          <div class="award-logo">
+            <img src="<?php echo get_template_directory_uri() ?>/images/humaan.png">
+          </div>
+          <p class="award-label">the Humaan Award for Usability</p>
+          <p class="award-winner">David Whitehouse</p>
+        </div>
+        <div class="award-block">
+          <div class="award-logo">
+            <img src="<?php echo get_template_directory_uri() ?>/images/loaded.png">
+          </div>
+          <p class="award-label">the Loaded Communications Award for User Experience</p>
+          <p class="award-winner">David Whitehouse</p>
+        </div>
+        <div class="award-block">
+          <div class="award-logo">
+            <img src="<?php echo get_template_directory_uri() ?>/images/monk.png">
+          </div>
+          <p class="award-label">the Monk Media Award for Innovation in Aesthetics</p>
+          <p class="award-winner">Laverne Moi</p>
+        </div>
+        <div class="award-block">
+          <div class="award-logo">
+            <img src="<?php echo get_template_directory_uri() ?>/images/curtin-university-logo.png">
+          </div>
+          <p class="award-label">the Curtin University Alumni Award for Potential in Entertainment</p>
+          <p class="award-winner">Elizabeth Englund and Cameron Whiting</p>
+        </div>
       </div>
-    
+      <span class="diamond"></span>
     </div>
 
     <div class="video-section" id="video-teaser">
       <div class="video-wrap">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/wGN4nsFnlls?showinfo=0&modestbranding=1&loop=1&rel=0" frameborder="0"  encrypted-media" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mQRQsw_-qxU?showinfo=0&modestbranding=1&loop=1&rel=0" frameborder="0"  encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
 

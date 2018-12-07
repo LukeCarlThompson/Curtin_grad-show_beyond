@@ -238,28 +238,60 @@
     background-attachment: scroll;
   }
 }
-.details-info-wrap {
-  margin: auto;
-  background-color: white;
-  padding: 2rem 2rem 1rem;
-  // box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.1);
-  text-align: center;
+.award-winners-wrap {
+  margin: 0 auto 6rem;
+  padding: 4rem 2rem 4rem;
   h2 {
-    margin: 0.5rem 0.5rem;
+    margin: 0.5rem 0.5rem 3rem;
     text-transform: capitalize;
   }
   h3 {
     font-size: 1.8rem;
-    margin: 0;
+    margin-top: 0;
   }
-  .address {
-    font-familY: $font__title;
-    font-weight: 700;
-    font-size: 1.4rem;
-    margin: 0.2rem 0 1.6rem;
+  .award-grid-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .award-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 0.6rem;
+    flex: 0 1 calc(33.3333% - 1rem);
+    border-radius: 4px;
+    box-shadow: 0 10px 20px rgba($color__brand_teal, 0.15), 0 20px 10px -20px rgba($color__brand_teal, 0.4);
+    border: solid 1px rgba($color__brand_teal, 0.3);
+    @media screen and (max-width: 1000px) {
+      flex: 0 1 calc(50% - 1rem);
+    }
+    @media screen and (max-width: 600px) {
+      flex: 0 1 100%;
+    }
+  }
+  .award-logo {
+    max-width: 150px;
+    margin: 0 auto 0.5rem;
+    img {
+      max-height: 80px;
+      margin: 0 auto;
+    }
+  }
+  .award-label, .award-winner {
+    margin: 0 auto;
+  }
+  .award-label {
+    text-align: center;
+    color: rgba($color__text-main, 0.8);
+    margin-bottom: 0.1rem;
+  }
+  .award-winner {
+    font-size: 1.2rem;
   }
   .diamond {
-    margin-bottom: 1rem;
+    margin: 3rem auto 0;
   }
 }
 
